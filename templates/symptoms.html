@@ -1,0 +1,209 @@
+{% extends "layout.html" %}
+
+{% block title %}Symptoms - AI Fibro{% endblock %}
+
+{% block content %}
+<div class="bg-white rounded-lg shadow-md p-8">
+    <h1 class="text-3xl font-bold mb-6 text-gray-800">Symptoms of Fibromyalgia</h1>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4 text-gray-800">Primary Symptoms</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+          <h3 class="font-semibold text-blue-800 mb-2">Widespread Pain</h3>
+          <p class="text-gray-700 text-sm">Persistent pain affecting multiple areas of the body, often described as aching, burning, or throbbing.</p>
+        </div>
+        <div class="p-4 bg-green-50 rounded-lg border-l-4 border-green-400">
+          <h3 class="font-semibold text-green-800 mb-2">Severe Fatigue</h3>
+          <p class="text-gray-700 text-sm">Extreme tiredness that isn't relieved by rest, often worse in the morning.</p>
+        </div>
+        <div class="p-4 bg-purple-50 rounded-lg border-l-4 border-purple-400">
+          <h3 class="font-semibold text-purple-800 mb-2">Sleep Disturbances</h3>
+          <p class="text-gray-700 text-sm">Difficulty falling asleep, staying asleep, or feeling refreshed after sleep.</p>
+        </div>
+        <div class="p-4 bg-orange-50 rounded-lg border-l-4 border-orange-400">
+          <h3 class="font-semibold text-orange-800 mb-2">Cognitive Issues</h3>
+          <p class="text-gray-700 text-sm">Problems with memory, concentration, and mental clarity (often called "fibro fog").</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4 text-gray-800">Associated Symptoms</h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+        <li class="flex items-start">
+          <span class="text-teal-500 mr-2">•</span>
+          <span>Muscle stiffness and spasms</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-teal-500 mr-2">•</span>
+          <span>Chronic headaches or migraines</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-teal-500 mr-2">•</span>
+          <span>Irritable bowel syndrome (IBS)</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-teal-500 mr-2">•</span>
+          <span>Temporomandibular joint disorder (TMJ)</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-teal-500 mr-2">•</span>
+          <span>Sensitivity to noise, light, and temperature</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-teal-500 mr-2">•</span>
+          <span>Restless legs syndrome</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-teal-500 mr-2">•</span>
+          <span>Depression and anxiety</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-teal-500 mr-2">•</span>
+          <span>Dry eyes and mouth</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4 text-gray-800">Tender Points</h2>
+      <p class="mb-4 text-gray-700 leading-relaxed">
+        Fibromyalgia is often diagnosed using the concept of "tender points" - specific areas on the body that are particularly sensitive to pressure. These include:
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-600">
+        <div class="text-center">
+          <div class="w-3 h-3 bg-red-400 rounded-full mx-auto mb-2"></div>
+          <span>Neck</span>
+        </div>
+        <div class="text-center">
+          <div class="w-3 h-3 bg-red-400 rounded-full mx-auto mb-2"></div>
+          <span>Shoulders</span>
+        </div>
+        <div class="text-center">
+          <div class="w-3 h-3 bg-red-400 rounded-full mx-auto mb-2"></div>
+          <span>Upper back</span>
+        </div>
+        <div class="text-center">
+          <div class="w-3 h-3 bg-red-400 rounded-full mx-auto mb-2"></div>
+          <span>Lower back</span>
+        </div>
+        <div class="text-center">
+          <div class="w-3 h-3 bg-red-400 rounded-full mx-auto mb-2"></div>
+          <span>Elbows</span>
+        </div>
+        <div class="text-center">
+          <div class="w-3 h-3 bg-red-400 rounded-full mx-auto mb-2"></div>
+          <span>Hips</span>
+        </div>
+        <div class="text-center">
+          <div class="w-3 h-3 bg-red-400 rounded-full mx-auto mb-2"></div>
+          <span>Knees</span>
+        </div>
+        <div class="text-center">
+          <div class="w-3 h-3 bg-red-400 rounded-full mx-auto mb-2"></div>
+          <span>Chest</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4 text-gray-800">Common Triggers</h2>
+      <p class="mb-4 text-gray-700 leading-relaxed">
+        Understanding what triggers or worsens your symptoms can help you manage fibromyalgia more effectively. Common triggers include:
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-4 bg-red-50 rounded-lg">
+          <h3 class="font-semibold text-red-800 mb-2">Physical Factors</h3>
+          <ul class="text-sm text-gray-700 space-y-1">
+            <li>• Overexertion or physical stress</li>
+            <li>• Poor sleep quality</li>
+            <li>• Weather changes (cold, damp)</li>
+            <li>• Physical trauma or injury</li>
+          </ul>
+        </div>
+        <div class="p-4 bg-amber-50 rounded-lg">
+          <h3 class="font-semibold text-amber-800 mb-2">Lifestyle Factors</h3>
+          <ul class="text-sm text-gray-700 space-y-1">
+            <li>• Emotional stress or anxiety</li>
+            <li>• Caffeine or alcohol consumption</li>
+            <li>• Skipping meals or poor nutrition</li>
+            <li>• Hormonal changes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4 text-gray-800">When to Seek Medical Help</h2>
+      <p class="mb-4 text-gray-700 leading-relaxed">
+        While fibromyalgia symptoms can fluctuate, certain signs may indicate the need for immediate medical attention:
+      </p>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+        <li class="flex items-start">
+          <span class="text-red-500 mr-2">⚠️</span>
+          <span>Severe, persistent pain that interferes with daily activities</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-red-500 mr-2">⚠️</span>
+          <span>Symptoms that worsen rapidly or don't improve with treatment</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-red-500 mr-2">⚠️</span>
+          <span>New or unusual symptoms that concern you</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-red-500 mr-2">⚠️</span>
+          <span>Signs of depression, anxiety, or suicidal thoughts</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-red-500 mr-2">⚠️</span>
+          <span>Difficulty with basic self-care or mobility</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-red-500 mr-2">⚠️</span>
+          <span>Symptoms affecting work, relationships, or quality of life</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4 text-gray-800">Symptom Tracking</h2>
+      <p class="mb-4 text-gray-700 leading-relaxed">
+        Keeping track of your symptoms can help you identify patterns, triggers, and treatment effectiveness. Consider tracking:
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="text-center p-4 bg-blue-50 rounded-lg">
+          <div class="text-2xl mb-2">📊</div>
+          <h4 class="font-semibold mb-2">Pain Levels</h4>
+          <p class="text-sm text-gray-600">Rate pain intensity and location daily</p>
+        </div>
+        <div class="text-center p-4 bg-green-50 rounded-lg">
+          <div class="text-2xl mb-2">😴</div>
+          <h4 class="font-semibold mb-2">Sleep Quality</h4>
+          <p class="text-sm text-gray-600">Track sleep duration and quality</p>
+        </div>
+        <div class="text-center p-4 bg-purple-50 rounded-lg">
+          <div class="text-2xl mb-2">🧠</div>
+          <h4 class="font-semibold mb-2">Energy & Mood</h4>
+          <p class="text-sm text-gray-600">Monitor fatigue and emotional state</p>
+        </div>
+      </div>
+      <p class="mt-4 text-gray-700 leading-relaxed">
+        Use our symptom tracker tool to log your experiences and share insights with your healthcare provider.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-gray-800">Important Notes</h2>
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+        <p class="text-gray-700 leading-relaxed">
+          <strong>Symptoms vary:</strong> Not everyone experiences all symptoms, and their intensity can fluctuate. Some people have mild symptoms while others are severely affected.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-2">
+          <strong>Seek professional help:</strong> If you suspect you have fibromyalgia, consult with a healthcare professional for proper diagnosis and treatment. Self-diagnosis can be misleading.
+        </p>
+      </div>
+    </section>
+  </div>
+{% endblock %}

@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+
+{% block title %}AI Chat - AI Fibro{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-teal-50 py-12">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-8">
+      <h1 class="text-4xl font-bold mb-4 text-gray-800">AI Fibro Assistant</h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Get instant answers to your questions about fibromyalgia from our intelligent assistant.
+      </p>
+    </div>
+
+    <div class="flex gap-6">
+      {% if session.chat_history %}
+      <div class="w-80 flex-shrink-0">
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <h3 class="font-semibold mb-4 text-gray-800 flex items-center">
+            <span class="text-lg mr-2">💬</span> Saved Chats
+          </h3>
+          <div class="space-y-3 max-h-96 overflow-y-auto">
+            {% for chat in session.chat_history %}
+            <div class="border border-gray-100 rounded-lg p-3 hover:bg-gray-50 transition-colors">
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-medium text-gray-800 truncate">{{ chat.title }}</p>
+                <p class="text-xs text-gray-500 mt-1">
+                  {{ chat.timestamp[:10] }} • {{ chat.messages|length }} messages
+                </p>
+              </div>
+              <div class="flex justify-end mt-2 gap-2">
+                <a href="{{ url_for('load_chat', chat_id=chat.id) }}" class="text-xs text-blue-500 hover:text-blue-700 font-medium">Load</a>
+                <a href="{{ url_for('delete_chat', chat_id=chat.id) }}" class="text-xs text-red-500 hover:text-red-700 font-medium">Delete</a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      <div class="flex-1">
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-semibold text-gray-800">Chat with AI Assistant</h2>
+            <div class="flex gap-2">
+              <form action="{{ url_for('save_chat') }}" method="post" style="display: inline;">
+                <input type="text" name="title" placeholder="Chat title" class="border border-gray-300 px-3 py-2 rounded-lg text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent" required>
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors text-sm ml-2">Save</button>
+              </form>
+              <a href="{{ url_for('new_chat') }}" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors text-sm">New Chat</a>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 h-96 overflow-y-auto p-4 rounded-lg bg-gradient-to-b from-gray-50 to-white" id="chat-messages">
+            {% if not session.messages %}
+            <div class="text-center py-12">
+              <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-teal-600 text-2xl">🤖</span>
+              </div>
+              <p class="text-gray-500 text-lg">Hello! I'm here to help you with information about fibromyalgia.</p>
+              <p class="text-gray-400 text-sm mt-2">Start a conversation by asking a question below.</p>
+            </div>
+            {% else %}
+            {% for msg in session.messages %}
+            <div class="mb-6 {{ 'flex justify-end' if msg.sender == 'user' else 'flex justify-start' }}">
+              <div class="max-w-lg">
+                {% if msg.sender == 'bot' %}
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span class="text-teal-600 text-sm">🤖</span>
+                  </div>
+                  <div class="bg-white border border-gray-200 rounded-2xl rounded-tl-md px-4 py-3 shadow-sm">
+                    <p class="text-gray-800">{{ msg.text }}</p>
+                  </div>
+                </div>
+                {% else %}
+                <div class="bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-2xl rounded-tr-md px-4 py-3 shadow-sm">
+                  <p>{{ msg.text }}</p>
+                </div>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <div class="flex gap-3">
+            <input type="text" id="message-input" class="flex-1 border border-gray-300 px-4 py-3 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent text-black placeholder-gray-400" placeholder="Ask about fibromyalgia symptoms, treatments, or anything else..." />
+            <button id="send-button" class="bg-gradient-to-r from-teal-500 to-blue-500 text-white px-8 py-3 rounded-xl hover:from-teal-600 hover:to-blue-600 transition-all shadow-md font-medium">
+              Send
+            </button>
+          </div>
+          <p class="text-xs text-gray-500 mt-3 text-center">Remember: This AI provides general information. Consult healthcare professionals for personalized medical advice.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('send-button').addEventListener('click', sendMessage);
+document.getElementById('message-input').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    sendMessage();
+  }
+});
+
+function sendMessage() {
+  const input = document.getElementById('message-input');
+  const message = input.value.trim();
+  if (!message) return;
+
+  // Add user message to UI
+  addMessage(message, 'user');
+  input.value = '';
+
+  // Send to server
+  fetch('{{ url_for("chatbot") }}', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ message: message }),
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      // Reload the page to show new messages
+      location.reload();
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    addMessage('Sorry, I encountered an error. Please try again.', 'bot');
+  });
+}
+
+function addMessage(text, sender) {
+  const messagesDiv = document.getElementById('chat-messages');
+  const messageDiv = document.createElement('div');
+  messageDiv.className = `mb-4 ${sender === 'user' ? 'text-right' : 'text-left'}`;
+  const span = document.createElement('span');
+  span.className = `inline-block p-3 rounded-lg max-w-xs lg:max-w-md ${sender === 'user' ? 'bg-teal-500 text-white' : 'bg-white text-black border border-gray-200'}`;
+  span.textContent = text;
+  messageDiv.appendChild(span);
+  messagesDiv.appendChild(messageDiv);
+  messagesDiv.scrollTop = messagesDiv.scrollHeight;
+}
+</script>
+{% endblock %}
