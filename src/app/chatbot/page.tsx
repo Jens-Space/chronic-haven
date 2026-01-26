@@ -279,13 +279,13 @@ export default function Chatbot() {
 
         {/* Main Chat Area */}
         <div className="flex-1 flex flex-col">
-          <div className="border border-gray-200 flex-1 overflow-y-auto p-4 mb-6 rounded-lg bg-gray-50 min-h-0">
+          <div className="border border-gray-200 flex-1 overflow-y-auto p-2 md:p-4 mb-4 md:mb-6 rounded-lg bg-gray-50 min-h-0">
             {messages.length === 0 && (
               <p className="text-gray-500 italic">Start a conversation by asking a question about fibromyalgia...</p>
             )}
             {messages.map((msg, idx) => (
               <div key={idx} className={`mb-4 ${msg.sender === 'user' ? 'text-right' : 'text-left'}`}>
-                <span className={`inline-block p-3 rounded-lg max-w-xs lg:max-w-md ${
+                <span className={`inline-block p-3 rounded-lg max-w-full sm:max-w-xs md:max-w-md ${
                   msg.sender === 'user'
                     ? 'bg-teal-500 !text-black'
                     : 'bg-white !text-black border border-gray-200'
@@ -295,7 +295,7 @@ export default function Chatbot() {
               </div>
             ))}
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-col sm:flex-row gap-2">
             <input
               type="text"
               value={input}
@@ -304,7 +304,7 @@ export default function Chatbot() {
               className="flex-1 border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent !text-black"
               placeholder="Ask about fibromyalgia..."
             />
-            <button onClick={handleSend} className="bg-gradient-to-r from-teal-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:from-teal-600 hover:to-blue-600 transition-all shadow-md">
+            <button onClick={handleSend} className="bg-gradient-to-r from-teal-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:from-teal-600 hover:to-blue-600 transition-all shadow-md w-full sm:w-auto">
               Send
             </button>
           </div>
