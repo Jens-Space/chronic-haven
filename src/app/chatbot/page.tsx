@@ -7,6 +7,7 @@ export default function Chatbot() {
   const [input, setInput] = useState('');
   const [chatHistory, setChatHistory] = useState<{ id: string; title: string; messages: typeof messages; timestamp: string }[]>([]);
   const [currentChatId, setCurrentChatId] = useState<string | null>(null);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Load chat history from localStorage on component mount
   useEffect(() => {
@@ -172,6 +173,7 @@ export default function Chatbot() {
     if (chat) {
       setMessages(chat.messages);
       setCurrentChatId(chatId);
+      setSidebarOpen(false);
     }
   };
 
@@ -208,6 +210,14 @@ export default function Chatbot() {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold text-gray-800">AI Fibro Assistant</h1>
         <div className="flex gap-2">
+          {chatHistory.length > 0 && (
+            <button
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+              className="md:hidden bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors text-sm"
+            >
+              Chat History
+            </button>
+          )}
           <button
             onClick={saveCurrentChat}
             className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors text-sm"
@@ -223,10 +233,10 @@ export default function Chatbot() {
         </div>
       </div>
 
-      <div className="flex gap-6">
+      <div className="flex flex-col md:flex-row gap-6">
         {/* Chat History Sidebar */}
         {chatHistory.length > 0 && (
-          <div className="w-64 flex-shrink-0">
+          <div className={`w-full md:w-64 flex-shrink-0 ${sidebarOpen ? 'block' : 'hidden'} md:block`}>
             <h3 className="font-semibold mb-3 text-gray-800">Saved Chats</h3>
             <div className="space-y-2 max-h-96 overflow-y-auto">
               {chatHistory.map((chat) => (
