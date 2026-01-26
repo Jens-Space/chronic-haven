@@ -206,7 +206,7 @@ export default function Chatbot() {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-8">
+    <div className="bg-white rounded-lg shadow-md p-4 md:p-8">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold text-gray-800">AI Fibro Assistant</h1>
         <div className="flex gap-2">
@@ -278,8 +278,8 @@ export default function Chatbot() {
         )}
 
         {/* Main Chat Area */}
-        <div className="flex-1">
-          <div className="border border-gray-200 h-96 overflow-y-auto p-4 mb-6 rounded-lg bg-gray-50">
+        <div className="flex-1 flex flex-col">
+          <div className="border border-gray-200 flex-1 overflow-y-auto p-4 mb-6 rounded-lg bg-gray-50 min-h-0">
             {messages.length === 0 && (
               <p className="text-gray-500 italic">Start a conversation by asking a question about fibromyalgia...</p>
             )}
