@@ -56,6 +56,11 @@
   - Chat management (save/load/delete)
   - Custom naming for saved conversations
   - Persistent chat history
+  - Mobile-responsive design with toggleable sidebar
+  - Responsive layout adapting to screen size
+  - Stacked input controls on mobile
+  - Centered header layout on mobile
+  - Flexible chat area height for optimal space usage
 
 ### Phase 5: Community Features
 - [x] **Basic Forum**: Local storage-based community
