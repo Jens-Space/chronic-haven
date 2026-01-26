@@ -207,9 +207,9 @@ export default function Chatbot() {
 
   return (
     <div className="bg-white rounded-lg shadow-md p-4 md:p-8">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold text-gray-800">AI Fibro Assistant</h1>
-        <div className="flex gap-2">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6">
+        <h1 className="text-3xl font-bold text-gray-800 text-center md:text-left">AI Fibro Assistant</h1>
+        <div className="flex justify-center gap-2 mt-4 md:mt-0 md:justify-end">
           {chatHistory.length > 0 && (
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
