@@ -175,3 +175,6 @@ The Fibro Support Hub website is complete and ready for deployment. All core fea
 ---
 
 *Last updated: January 23, 2026 at 21:12 UTC*
+## Recent Update - 2026-01-26
+- commit message for chatbot update
+
