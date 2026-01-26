@@ -552,6 +552,7 @@ export type SymptomEntryCreateOrConnectWithoutUserInput = {
 
 export type SymptomEntryCreateManyUserInputEnvelope = {
   data: Prisma.SymptomEntryCreateManyUserInput | Prisma.SymptomEntryCreateManyUserInput[]
+  skipDuplicates?: boolean
 }
 
 export type SymptomEntryUpsertWithWhereUniqueWithoutUserInput = {
@@ -1370,6 +1371,7 @@ export type SymptomEntryCreateManyArgs<ExtArgs extends runtime.Types.Extensions.
    * The data used to create many SymptomEntries.
    */
   data: Prisma.SymptomEntryCreateManyInput | Prisma.SymptomEntryCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1388,6 +1390,7 @@ export type SymptomEntryCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Ex
    * The data used to create many SymptomEntries.
    */
   data: Prisma.SymptomEntryCreateManyInput | Prisma.SymptomEntryCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */
