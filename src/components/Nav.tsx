@@ -20,6 +20,7 @@ const Nav = () => {
           <li><Link href="/treatments" className="hover:text-teal-100 transition-colors">Treatments</Link></li>
           <li><Link href="/resources" className="hover:text-teal-100 transition-colors">Resources</Link></li>
           <li><Link href="/chatbot" className="hover:text-teal-100 transition-colors">AI Chat</Link></li>
+          <li><Link href="/feedback" className="hover:text-teal-100 transition-colors">Feedback</Link></li>
         </ul>
         {/* Mobile menu button */}
         <button
@@ -42,6 +43,7 @@ const Nav = () => {
             <li><Link href="/treatments" className="block hover:text-teal-100 transition-colors" onClick={() => setIsOpen(false)}>Treatments</Link></li>
             <li><Link href="/resources" className="block hover:text-teal-100 transition-colors" onClick={() => setIsOpen(false)}>Resources</Link></li>
             <li><Link href="/chatbot" className="block hover:text-teal-100 transition-colors" onClick={() => setIsOpen(false)}>AI Chat</Link></li>
+            <li><Link href="/feedback" className="block hover:text-teal-100 transition-colors" onClick={() => setIsOpen(false)}>Feedback</Link></li>
           </ul>
         </div>
       )}
