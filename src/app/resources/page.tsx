@@ -27,17 +27,13 @@ export default function Resources() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-gray-800">Research & Support Organizations</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <a href="https://www.fmauk.org/" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
-            <h3 className="font-semibold text-teal-600 mb-2">Fibromyalgia Association UK</h3>
-            <p className="text-sm text-gray-600">UK-based support, information, and advocacy for fibromyalgia patients.</p>
-          </a>
-          <a href="https://painuk.org/members/charities/fibromyalgia-action/" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
-            <h3 className="font-semibold text-teal-600 mb-2">Fibromyalgia Action</h3>
-            <p className="text-sm text-gray-600">Charity providing support, information, and research for fibromyalgia.</p>
-          </a>
           <a href="https://www.thebraincharity.org.uk/condition/fibromyalgia/" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
             <h3 className="font-semibold text-teal-600 mb-2">The Brain Charity - Fibromyalgia</h3>
             <p className="text-sm text-gray-600">Information and support for neurological conditions including fibromyalgia.</p>
+          </a>
+          <a href="https://fibro.org.uk/support-for-carers/" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
+            <h3 className="font-semibold text-teal-600 mb-2">Fibromyalgia Association UK - Support for Carers</h3>
+            <p className="text-sm text-gray-600">Support resources for carers of people with fibromyalgia.</p>
           </a>
           <a href="https://www.webmd.com/fibromyalgia/default.htm" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
             <h3 className="font-semibold text-teal-600 mb-2">WebMD - Fibromyalgia</h3>
