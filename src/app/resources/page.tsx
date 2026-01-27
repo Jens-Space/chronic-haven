@@ -13,10 +13,6 @@ export default function Resources() {
             <h3 className="font-semibold text-teal-600 mb-2">Arthritis Foundation</h3>
             <p className="text-sm text-gray-600">Comprehensive information about fibromyalgia symptoms, treatments, and research.</p>
           </a>
-          <a href="https://www.cdc.gov/arthritis/basics/fibromyalgia.htm" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
-            <h3 className="font-semibold text-teal-600 mb-2">CDC - Fibromyalgia</h3>
-            <p className="text-sm text-gray-600">Government health information on fibromyalgia basics and statistics.</p>
-          </a>
           <a href="https://www.mayoclinic.org/diseases-conditions/fibromyalgia/symptoms-causes/syc-20354780" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
             <h3 className="font-semibold text-teal-600 mb-2">Mayo Clinic</h3>
             <p className="text-sm text-gray-600">Detailed medical information about symptoms, causes, and treatment options.</p>
@@ -31,17 +27,17 @@ export default function Resources() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-gray-800">Research & Support Organizations</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <a href="https://www.fmcpaware.org/" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
-            <h3 className="font-semibold text-teal-600 mb-2">National Fibromyalgia & Chronic Pain Association</h3>
-            <p className="text-sm text-gray-600">Patient advocacy, research funding, and support services.</p>
-          </a>
-          <a href="https://www.fibromyalgia-association.org.uk/" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
+          <a href="https://www.fmauk.org/" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
             <h3 className="font-semibold text-teal-600 mb-2">Fibromyalgia Association UK</h3>
             <p className="text-sm text-gray-600">UK-based support, information, and advocacy for fibromyalgia patients.</p>
           </a>
-          <a href="https://www.fibrocenter.com/" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
-            <h3 className="font-semibold text-teal-600 mb-2">Fibromyalgia Treatment Centers of America</h3>
-            <p className="text-sm text-gray-600">Specialized treatment centers and research on fibromyalgia management.</p>
+          <a href="https://painuk.org/members/charities/fibromyalgia-action/" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
+            <h3 className="font-semibold text-teal-600 mb-2">Fibromyalgia Action</h3>
+            <p className="text-sm text-gray-600">Charity providing support, information, and research for fibromyalgia.</p>
+          </a>
+          <a href="https://www.thebraincharity.org.uk/condition/fibromyalgia/" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
+            <h3 className="font-semibold text-teal-600 mb-2">The Brain Charity - Fibromyalgia</h3>
+            <p className="text-sm text-gray-600">Information and support for neurological conditions including fibromyalgia.</p>
           </a>
           <a href="https://www.webmd.com/fibromyalgia/default.htm" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
             <h3 className="font-semibold text-teal-600 mb-2">WebMD - Fibromyalgia</h3>
