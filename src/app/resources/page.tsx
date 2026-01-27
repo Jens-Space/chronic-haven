@@ -53,9 +53,17 @@ export default function Resources() {
             <h3 className="font-semibold text-teal-600 mb-2">Reddit - r/fibromyalgia</h3>
             <p className="text-sm text-gray-600">Active community for sharing experiences and support.</p>
           </a>
-          <a href="https://www.dailystrength.org/group/fibromyalgia" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
-            <h3 className="font-semibold text-teal-600 mb-2">Daily Strength - Fibromyalgia</h3>
-            <p className="text-sm text-gray-600">Online support groups and discussion forums.</p>
+          <a href="https://www.myfibroteam.com/" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
+            <h3 className="font-semibold text-teal-600 mb-2">MyFibroTeam</h3>
+            <p className="text-sm text-gray-600">Social network for fibromyalgia patients to connect and share experiences.</p>
+          </a>
+          <a href="https://www.webmd.com/fibromyalgia/fibromyalgia-finding-help-index" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
+            <h3 className="font-semibold text-teal-600 mb-2">WebMD - Finding Help</h3>
+            <p className="text-sm text-gray-600">Resources for finding support and treatment for fibromyalgia.</p>
+          </a>
+          <a href="https://healthunlocked.com/fibromyalgia-action-uk" className="block p-4 border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all">
+            <h3 className="font-semibold text-teal-600 mb-2">HealthUnlocked - Fibromyalgia Action UK</h3>
+            <p className="text-sm text-gray-600">Online community for fibromyalgia support and discussions.</p>
           </a>
         </div>
       </section>
