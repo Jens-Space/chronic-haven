@@ -75,7 +75,7 @@ export default function Feedback() {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 placeholder:text-gray-900"
             placeholder="Your name"
           />
         </div>
@@ -90,7 +90,7 @@ export default function Feedback() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 placeholder:text-gray-900"
             placeholder="your.email@example.com"
           />
         </div>
@@ -124,7 +124,7 @@ export default function Feedback() {
             rows={6}
             value={formData.message}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 placeholder:text-gray-900"
             placeholder="Please describe your feedback or the issue you're reporting..."
             required
           ></textarea>
