@@ -201,7 +201,10 @@ The Fibro Support Hub website is complete and ready for deployment. All core fea
 
 
 ## Recent Update - 2026-01-27
-- commit
+- Updated About page styling to match Symptoms page with colored characteristic boxes and important notes section
+- Updated Resources page: removed broken CDC link, updated organization links with UK-based resources
+- Temporarily removed feedback page due to email configuration issues
+- Improved form styling with darker text for better readability
 
 
 ## Recent Update - 2026-01-27
