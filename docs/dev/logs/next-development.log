@@ -1,2 +1,1 @@
-[00:02:24.319] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/home/jen/Documents/projects/ai_website/chronic-haven/docs/dev/server/app/page/build-manifest.json'
-[00:02:27.326] Server  LOG     ○ Compiling /_error ...
+[00:00:02.009] Server  LOG     ✓ Ready in 1530ms
