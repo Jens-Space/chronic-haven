@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fibro Support Hub",
-  description: "A safe, welcoming space for people with fibromyalgia.",
+  title: "Chronic Haven",
+  description: "A safe, welcoming space for people with chronic invisible illnesses.",
 };
 
 export default function RootLayout({

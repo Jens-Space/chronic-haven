@@ -9,10 +9,11 @@ const Nav = () => {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
+    { href: '/conditions', label: 'Conditions' },
     { href: '/symptoms', label: 'Symptoms' },
     { href: '/treatments', label: 'Treatments' },
     { href: '/resources', label: 'Resources' },
-    { href: '/chatbot', label: 'AI Chat' },
+    { href: '/community', label: 'Community' },
   ];
 
   return (
@@ -27,7 +28,7 @@ const Nav = () => {
             <path d="M20 35.5C20 35.5 5 24.5 5 14.5C5 8.5 9.5 4 15.5 4C18.5 4 21 5.5 22.5 7.5C24 5.5 26.5 4 29.5 4C35.5 4 40 8.5 40 14.5C40 24.5 25 35.5 25 35.5H20Z" />
           </svg>
           <span className="text-xl font-semibold text-gray-800 group-hover:text-purple-600 transition-colors">
-            Fibro Support Hub
+            Chronic Haven
           </span>
         </Link>
         <div className="hidden md:flex">
