@@ -1,9 +1,9 @@
-# Fibro Support Hub - Development Progress
+# Chronic Haven - Development Progress
 
 ## 📅 Project Timeline
 
 **Started**: January 23, 2026
-**Current Status**: Fully functional website with wellbeing-corner inspired design
+**Current Status**: Fully functional website with calming, supportive design
 
 ## ✅ Completed Features
 
@@ -74,29 +74,14 @@
 
 ## 🎯 Project Status: **PRODUCTION READY**
 
-The Fibro Support Hub website is complete with a welcoming, wellbeing-corner inspired design and helpful resource links.
+The Chronic Haven website is complete with a welcoming, calming design and helpful resource links for those living with chronic conditions.
 
 ---
 
-*Last updated: February 1, 2026 at 13:47 UTC*
+*Last updated: February 1, 2026 at 18:08 UTC*
 
 ## Recent Update - 2026-02-01
-- Updated home page with wellbeing-corner inspired contained layout
-- Added colorful gradient sections with themed card backgrounds
-- Centered all section titles with emoji accents
-- Made text larger, bolder, and easier to read
-- Updated navigation to be centered with custom purple heart logo
-- Added diverse emojis to reduce heart repetition
-- Made encouraging message section match welcome section style
-- Updated all section descriptions to be more friendly and inviting
-- Replaced interactive symptom tracker with free Android app recommendations
-- Added 6 free symptom tracker apps with clickable Play Store links
-- Added tips section for effective symptom tracking
-
-## Recent Update - 2026-02-01
-- commit
-
-
-## Recent Update - 2026-02-01
-- commit
+- Updated project name from "Fibro Support Hub" to "Chronic Haven"
+- Updated all references throughout documentation to reflect new branding
+- Maintained all features and functionality while updating project identity
 
