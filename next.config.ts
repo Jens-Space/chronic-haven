@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   distDir: 'docs',
+  basePath: '/chronic-haven',
 };
 
 export default nextConfig;
