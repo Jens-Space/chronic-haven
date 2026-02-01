@@ -101,3 +101,7 @@ The Chronic Haven website is complete with a welcoming, calming design and helpf
 ## Recent Update - 2026-02-01
 - Setup docs folder for GitHub Pages deployment
 
+
+## Recent Update - 2026-02-01
+- Remove auto-generated workflow, using docs folder for GitHub Pages
+
