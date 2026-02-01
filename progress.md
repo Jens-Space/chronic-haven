@@ -89,3 +89,7 @@ The Chronic Haven website is complete with a welcoming, calming design and helpf
 ## Recent Update - 2026-02-01
 - commit
 
+
+## Recent Update - 2026-02-01
+- Update next.config for static export
+
