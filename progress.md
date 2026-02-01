@@ -78,7 +78,7 @@ The Chronic Haven website is complete with a welcoming, calming design and helpf
 
 ---
 
-*Last updated: February 1, 2026 at 18:08 UTC*
+*Last updated: February 1, 2026 at 22:34 UTC*
 
 ## Recent Update - 2026-02-01
 - Updated project name from "Fibro Support Hub" to "Chronic Haven"
@@ -108,4 +108,12 @@ The Chronic Haven website is complete with a welcoming, calming design and helpf
 
 ## Recent Update - 2026-02-01
 - Rebuild docs folder with latest changes
+
+
+## Recent Update - 2026-02-01 (GitHub Pages Fix)
+- Added `trailingSlash: true` to next.config.ts for GitHub Pages compatibility
+- Added `basePath: '/chronic-haven'` to serve site at https://jens-space.github.io/chronic-haven/
+- Added `.nojekyll` file to prevent GitHub Pages from processing site with Jekyll
+- CSS files now load correctly through GitHub Pages
+- Site successfully deployed and accessible at https://jens-space.github.io/chronic-haven/
 
