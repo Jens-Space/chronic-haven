@@ -78,7 +78,7 @@ The Chronic Haven website is complete with a welcoming, calming design and helpf
 
 ---
 
-*Last updated: February 1, 2026 at 22:34 UTC*
+*Last updated: February 2, 2026 at 08:31 UTC*
 
 ## Recent Update - 2026-02-01
 - Updated project name from "Fibro Support Hub" to "Chronic Haven"
@@ -108,6 +108,13 @@ The Chronic Haven website is complete with a welcoming, calming design and helpf
 
 ## Recent Update - 2026-02-01
 - Rebuild docs folder with latest changes
+
+
+## Recent Update - 2026-02-02
+- Updated all pages to have visible "Back to Top" buttons next to "Back to Home" buttons
+- Removed scroll-based floating back to top button
+- Now buttons are always visible and accessible at the bottom of each page
+- Fixed git remote URL to point to correct repository (chronic-haven)
 
 
 ## Recent Update - 2026-02-01 (GitHub Pages Fix)
