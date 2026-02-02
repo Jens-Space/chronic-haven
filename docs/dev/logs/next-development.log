@@ -1,0 +1,69 @@
+[00:00:01.120] Server  LOG     ✓ Ready in 832ms
+[00:00:02.699] Server  ERROR   ⨯ ./src/components/Nav.tsx:75:1
+Parsing ecmascript source code failed
+  73 |     </nav>
+  74 |   );
+> 75 | };
+     | ^
+  76 |
+  77 | export default Nav;
+  78 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./src/components/Nav.tsx
+    ./src/app/layout.tsx
+
+
+[00:00:03.361] Browser ERROR   uncaughtError: Error: ./src/components/Nav.tsx:75:1
+Parsing ecmascript source code failed
+  73 |     </nav>
+  74 |   );
+> 75 | };
+     | ^
+  76 |
+  77 | export default Nav;
+  78 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./src/components/Nav.tsx
+    ./src/app/layout.tsx
+
+
+[00:00:03.361] Browser ERROR   ./src/components/Nav.tsx:75:1
+Parsing ecmascript source code failed
+  73 |     </nav>
+  74 |   );
+> 75 | };
+     | ^
+  76 |
+  77 | export default Nav;
+  78 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./src/components/Nav.tsx
+    ./src/app/layout.tsx
+[00:00:03.361] Browser ERROR   ./src/components/Nav.tsx:75:1
+Parsing ecmascript source code failed
+  73 |     </nav>
+  74 |   );
+> 75 | };
+     | ^
+  76 |
+  77 | export default Nav;
+  78 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./src/components/Nav.tsx
+    ./src/app/layout.tsx
