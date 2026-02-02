@@ -21,16 +21,16 @@ const Nav = () => {
     <nav className="px-4 py-2">
       <div className="container mx-auto">
         <div className="flex items-center justify-center">
-          <Link href="/" aria-label="Chronic Haven Home">
+          <div aria-label="Chronic Haven Home">
             <Image
               src="/chronic-haven/logo.png"
               alt="Chronic Haven Logo"
               width={500}
               height={500}
-              className="object-contain" style={{ width: '400px', height: 'auto' }}
+              className="object-contain" style={{ width: '300px', height: 'auto' }}
               priority
             />
-          </Link>
+          </div>
           <div className="hidden md:flex gap-1">
             <ul className="flex gap-1">
               {navLinks.map((link) => (

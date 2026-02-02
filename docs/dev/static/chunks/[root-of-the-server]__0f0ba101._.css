@@ -869,6 +869,10 @@
     margin-bottom: calc(var(--spacing) * 12);
   }
 
+  .mb-27 {
+    margin-bottom: calc(var(--spacing) * 27);
+  }
+
   .ml-1 {
     margin-left: calc(var(--spacing) * 1);
   }

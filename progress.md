@@ -78,7 +78,17 @@ The Chronic Haven website is complete with a welcoming, calming design and helpf
 
 ---
 
-*Last updated: February 2, 2026 at 11:54 UTC*
+*Last updated: February 2, 2026 at 19:30 UTC*
+
+## Recent Update - 2026-02-02 (Navigation & Design Updates)
+- Changed navigation buttons to white background with black text for better readability
+- Added purple border to navigation buttons for visibility
+- Replaced logo with transparent background version
+- Resized logo to 300px width
+- Removed link from logo (no longer clickable)
+- Centered navigation with logo and buttons together
+- Reduced button sizes for more compact appearance
+- Updated footer: removed purple heart, added copyright notice "© 2026 Jen's Space. All rights reserved."
 
 ## Recent Update - 2026-02-01
 - Updated project name from "Fibro Support Hub" to "Chronic Haven"
