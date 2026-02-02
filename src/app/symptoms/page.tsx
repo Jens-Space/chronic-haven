@@ -243,11 +243,11 @@ export default function Symptoms() {
       <div className="flex flex-wrap justify-center gap-4 mb-6">
         <button
           onClick={scrollToTop}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-100 transition-colors border-2 border-purple-500"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white rounded-full font-bold hover:bg-purple-600 transition-colors shadow-md"
         >
-          ⬆️ Back to Top
+          Back to Top
         </button>
-        <Link href="/" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-100 transition-colors border-2 border-purple-500">
+        <Link href="/" className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white rounded-full font-bold hover:bg-purple-600 transition-colors shadow-md">
           Back to Home
         </Link>
       </div>
