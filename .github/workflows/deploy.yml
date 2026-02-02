@@ -1,3 +1,4 @@
+# Deploy workflow for GitHub Pages
 name: Deploy to GitHub Pages
 
 on:
