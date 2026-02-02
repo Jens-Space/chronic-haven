@@ -18,15 +18,15 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-purple-100 via-white to-purple-100 px-4 py-4 shadow-md rounded-b-2xl border-b border-purple-200">
+    <nav className="bg-gradient-to-r from-purple-100 via-white to-purple-100 px-4 py-2 shadow-md rounded-b-2xl border-b border-purple-200">
       <div className="container mx-auto flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6">
         <div className="flex items-center gap-2">
           <Link href="/" aria-label="Chronic Haven Home">
             <Image
-              src="logo.png"
+              src="/logo.png"
               alt="Chronic Haven Logo"
-              width={150}
-              height={150}
+              width={500}
+              height={500}
               className="object-contain"
               priority
             />
@@ -38,7 +38,7 @@ const Nav = () => {
               <li key={link.href}>
                 <Link 
                   href={link.href} 
-                  className="px-4 py-2 text-purple-700 hover:text-white hover:bg-purple-600 rounded-full transition-all duration-300 font-medium text-base md:text-lg shadow-sm hover:shadow-md"
+                  className="px-3 py-1 text-sm text-purple-700 hover:text-white hover:bg-purple-600 rounded-full transition-all duration-300 font-medium shadow-sm hover:shadow-md"
                 >
                   {link.label}
                 </Link>
