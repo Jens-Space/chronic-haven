@@ -18,36 +18,34 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-purple-100 via-white to-purple-100 px-4 py-2 shadow-md rounded-b-2xl border-b border-purple-200">
-      <div className="container mx-auto flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6">
-        <div className="flex items-center gap-2">
-          <Link href="/" aria-label="Chronic Haven Home">
-            <Image
-              src="/logo.png"
-              alt="Chronic Haven Logo"
-              width={500}
-              height={500}
-              className="object-contain"
-              priority
-            />
-          </Link>
-        </div>
-        <div className="hidden md:flex">
+    <nav className="px-4 py-2">
+      <div className="container mx-auto flex items-center">
+        <Link href="/" aria-label="Chronic Haven Home">
+          <Image
+            src="/logo.png"
+            alt="Chronic Haven Logo"
+            width={500}
+            height={500}
+            className="object-contain"
+            priority
+          />
+        </Link>
+        <div className="hidden md:flex flex-1 justify-center ml-4">
           <ul className="flex gap-2">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link 
-                  href={link.href} 
-                  className="px-3 py-1 text-sm text-purple-700 hover:text-white hover:bg-purple-600 rounded-full transition-all duration-300 font-medium shadow-sm hover:shadow-md"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <Link 
+                href={link.href} 
+                className="px-6 py-3 bg-purple-600 text-black rounded-full transition-all duration-300 font-bold text-lg md:text-xl shadow-md hover:bg-purple-700"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
           </ul>
         </div>
         <button
-          className="md:hidden p-2 text-purple-600 absolute top-4 right-4 bg-purple-100 rounded-full hover:bg-purple-200 transition-colors"
+          className="md:hidden p-2 text-purple-600 ml-auto bg-purple-100 rounded-full hover:bg-purple-200 transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -55,7 +53,7 @@ const Nav = () => {
         </button>
       </div>
       {isOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-sm mt-3 pb-4 rounded-xl shadow-lg border border-purple-200 mx-2">
+        <div className="md:hidden bg-white/95 backdrop-blur-sm mt-2 pb-4 rounded-xl shadow-lg border border-purple-200 mx-2">
           <ul className="space-y-2 px-2 text-center">
             {navLinks.map((link) => (
               <li key={link.href}>
