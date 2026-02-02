@@ -78,7 +78,7 @@ The Chronic Haven website is complete with a welcoming, calming design and helpf
 
 ---
 
-*Last updated: February 2, 2026 at 09:32 UTC*
+*Last updated: February 2, 2026 at 11:54 UTC*
 
 ## Recent Update - 2026-02-01
 - Updated project name from "Fibro Support Hub" to "Chronic Haven"
@@ -115,6 +115,21 @@ The Chronic Haven website is complete with a welcoming, calming design and helpf
 - Removed scroll-based floating back to top button
 - Now buttons are always visible and accessible at the bottom of each page
 - Fixed git remote URL to point to correct repository (chronic-haven)
+
+## Recent Update - 2026-02-02 (Button Styling)
+- Made buttons more purple with `bg-purple-600` and `hover:bg-purple-700`
+- Added `!important` to button text color to override globals.css link color
+- All buttons now display white text correctly
+
+## Recent Update - 2026-02-02 (Navigation Updates)
+- Removed home link from logo
+- Added "Home" button to navigation menu (first item above "About")
+- Made menu bar more friendly with:
+  - Soft purple gradient background
+  - Rounded bottom corners
+  - Pill-shaped navigation links with purple background on hover
+  - White text on purple when hovering over links
+  - Improved mobile menu with rounded corners and better styling
 
 
 ## Recent Update - 2026-02-01 (GitHub Pages Fix)
