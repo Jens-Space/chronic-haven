@@ -25,8 +25,8 @@ const Nav = () => {
             <Image
               src="logo.png"
               alt="Chronic Haven Logo"
-              width={80}
-              height={80}
+              width={150}
+              height={150}
               className="object-contain"
               priority
             />
