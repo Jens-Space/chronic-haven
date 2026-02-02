@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const Nav = () => {
@@ -20,16 +21,16 @@ const Nav = () => {
     <nav className="bg-gradient-to-r from-purple-100 via-white to-purple-100 px-4 py-4 shadow-md rounded-b-2xl border-b border-purple-200">
       <div className="container mx-auto flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6">
         <div className="flex items-center gap-2">
-          <svg 
-            className="w-10 h-10 text-purple-500 drop-shadow-sm" 
-            viewBox="0 0 40 40" 
-            fill="currentColor"
-          >
-            <path d="M20 35.5C20 35.5 5 24.5 5 14.5C5 8.5 9.5 4 15.5 4C18.5 4 21 5.5 22.5 7.5C24 5.5 26.5 4 29.5 4C35.5 4 40 8.5 40 14.5C40 24.5 25 35.5 25 35.5H20Z" />
-          </svg>
-          <span className="text-xl font-semibold text-purple-800 drop-shadow-sm">
-            Chronic Haven
-          </span>
+          <Link href="/" aria-label="Chronic Haven Home">
+            <Image
+              src="/logo.png"
+              alt="Chronic Haven Logo"
+              width={50}
+              height={50}
+              className="object-contain"
+              priority
+            />
+          </Link>
         </div>
         <div className="hidden md:flex">
           <ul className="flex gap-2">
