@@ -7,6 +7,7 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
+    { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/conditions', label: 'Conditions' },
     { href: '/symptoms', label: 'Symptoms' },
@@ -18,18 +19,18 @@ const Nav = () => {
   return (
     <nav className="bg-white px-4 py-5 shadow-sm border-b border-gray-100">
       <div className="container mx-auto flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
-        <Link href="/" className="flex items-center gap-2 hover:text-purple-600 transition-colors group">
+        <div className="flex items-center gap-2">
           <svg 
-            className="w-10 h-10 text-purple-500 group-hover:text-purple-600 transition-colors" 
+            className="w-10 h-10 text-purple-500" 
             viewBox="0 0 40 40" 
             fill="currentColor"
           >
             <path d="M20 35.5C20 35.5 5 24.5 5 14.5C5 8.5 9.5 4 15.5 4C18.5 4 21 5.5 22.5 7.5C24 5.5 26.5 4 29.5 4C35.5 4 40 8.5 40 14.5C40 24.5 25 35.5 25 35.5H20Z" />
           </svg>
-          <span className="text-xl font-semibold text-gray-800 group-hover:text-purple-600 transition-colors">
+          <span className="text-xl font-semibold text-gray-800">
             Chronic Haven
           </span>
-        </Link>
+        </div>
         <div className="hidden md:flex">
           <ul className="flex gap-6">
             {navLinks.map((link) => (
