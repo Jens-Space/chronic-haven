@@ -23,7 +23,7 @@ const Nav = () => {
         <div className="flex items-center gap-2">
           <Link href="/" aria-label="Chronic Haven Home">
             <Image
-              src="/logo.png"
+              src="/chronic-haven/logo.png"
               alt="Chronic Haven Logo"
               width={50}
               height={50}
