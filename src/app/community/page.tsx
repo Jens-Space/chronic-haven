@@ -96,26 +96,17 @@ export default function Community() {
       </div>
 
       {/* Navigation Button */}
-      <div className="text-center mb-6">
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
         <Link href="/" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-100 transition-colors border-2 border-purple-500">
           Back to Home
         </Link>
+        <button
+          onClick={scrollToTop}
+          className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-100 transition-colors border-2 border-purple-500"
+        >
+          ⬆️ Back to Top
+        </button>
       </div>
-
-      {/* Back to Top Button */}
-      {showBackToTop && (
-        <div className="fixed bottom-6 right-6">
-          <button
-            onClick={scrollToTop}
-            className="flex items-center justify-center w-12 h-12 bg-purple-500 text-white rounded-full shadow-lg hover:bg-purple-600 transition-colors"
-            aria-label="Back to top"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-            </svg>
-          </button>
-        </div>
-      )}
     </div>
   );
 }
