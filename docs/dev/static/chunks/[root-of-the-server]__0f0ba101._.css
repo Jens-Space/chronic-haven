@@ -921,6 +921,14 @@
     display: table;
   }
 
+  .\!h-1 {
+    height: calc(var(--spacing) * 1) !important;
+  }
+
+  .\!h-8 {
+    height: calc(var(--spacing) * 8) !important;
+  }
+
   .h-3 {
     height: calc(var(--spacing) * 3);
   }
@@ -939,6 +947,10 @@
 
   .h-16 {
     height: calc(var(--spacing) * 16);
+  }
+
+  .h-20 {
+    height: calc(var(--spacing) * 20);
   }
 
   .h-96 {
@@ -975,6 +987,10 @@
 
   .w-80 {
     width: calc(var(--spacing) * 80);
+  }
+
+  .w-auto {
+    width: auto;
   }
 
   .max-w-2xl {
@@ -2197,6 +2213,14 @@
     transition-timing-function: var(--ease-out);
   }
 
+  .\[app-\:\8 �\1f \] {
+    app-:  � ;
+  }
+
+  .\[app-\:\1b �\5 \] {
+    app-:  � ;
+  }
+
   .\[key\:\.�\14 \] {
     key: . � ;
   }
@@ -2205,12 +2229,28 @@
     key: u^ 4ng;
   }
 
+  .\[key\:�\5 Sng\] {
+    key: � Sng;
+  }
+
   .\[key\:�\1b 4ng\] {
     key: � 4ng;
   }
 
+  .\[key\:�\1c \14 \] {
+    key: �  ;
+  }
+
+  .\[key\:�5��\] {
+    key: �5��;
+  }
+
   .\[key\:��4ng\] {
     key: ��4ng;
+  }
+
+  .\[metatype\:�\5 7\] {
+    metatype: � 7;
   }
 
   .\[metatype\:�\5 c\] {
@@ -2227,6 +2267,14 @@
 
   .\[name\:\.\6 �\] {
     name: .  �;
+  }
+
+  .\[name\:�\6 �ng\] {
+    name: � �ng;
+  }
+
+  .\[name\:�\7 �\] {
+    name: � �;
   }
 
   @media (hover: hover) {
@@ -2502,13 +2550,6 @@
   @media (min-width: 48rem) {
     .md\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:text-2xl {
-      font-size: var(--text-2xl);
-      line-height: var(--tw-leading, var(--text-2xl--line-height));
     }
   }
 

@@ -67,3 +67,23 @@ Import trace:
   Server Component:
     ./src/components/Nav.tsx
     ./src/app/layout.tsx
+[00:00:18.983] Server  LOG     ✓ Compiled in 1570ms
+[00:00:19.686] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:19.834] Browser WARN    Image with src "http://localhost:3000/chronic-haven/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:00.374] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:00.502] Browser WARN    Image with src "http://localhost:3000/chronic-haven/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:07.602] Server  LOG     ✓ Compiled in 1040ms
+[00:01:23.660] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:11.072] Server  LOG     ✓ Compiled in 190ms
+[00:02:27.701] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:27.827] Browser WARN    Image with src "http://localhost:3000/chronic-haven/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:29.946] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:30.075] Browser WARN    Image with src "http://localhost:3000/chronic-haven/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:49.369] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:49.501] Browser WARN    Image with src "http://localhost:3000/chronic-haven/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:03:05.599] Server  LOG     ✓ Compiled in 244ms
+[00:06:58.526] Server  LOG     ✓ Compiled in 208ms
+[00:08:00.833] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:15.521] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:22.788] Server  LOG     ✓ Compiled in 136ms
+[00:09:30.516] Server  LOG     ✓ Compiled in 144ms
