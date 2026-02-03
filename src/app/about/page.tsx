@@ -286,18 +286,6 @@ export default function About() {
             Back to Home
           </Link>
         </div>
-
-        {/* Footer */}
-        <footer className="bg-white border-t mt-12">
-          <div className="max-w-4xl mx-auto py-4 px-4">
-            <p className="text-center text-xs text-gray-400">
-              © 2026 Jen's Space. All rights reserved.
-            </p>
-            <p className="text-center text-sm text-gray-500 mt-2">
-              Remember: This site provides information and tools but is not a substitute for professional medical advice. Always consult your healthcare provider for medical concerns.
-            </p>
-          </div>
-        </footer>
       </div>
     </div>
   );

@@ -36,11 +36,11 @@ export default function RootLayout({
         </main>
         <footer className="bg-white border-t border-gray-100 py-8">
           <div className="container mx-auto px-6 max-w-5xl text-center">
-            <p className="text-gray-600 text-sm mb-2">
-              © 2026 Jen's Space. All rights reserved.
-            </p>
-            <p className="text-gray-500 text-xs">
+            <p className="text-gray-500 text-xs mb-2">
               Remember: This site provides information and tools but is not a substitute for professional medical advice.
+            </p>
+            <p className="text-gray-600 text-sm">
+              © 2026 Jen's Space. All rights reserved.
             </p>
           </div>
         </footer>
