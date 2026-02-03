@@ -292,6 +292,9 @@ export default function About() {
           <p className="text-gray-500 font-medium">
             💙 Thank you for being here. Take care of yourself today. 💙
           </p>
+          <p className="text-gray-400 text-sm mt-2">
+            © 2025 Chronic Haven. All rights reserved.
+          </p>
         </div>
       </div>
     </div>
