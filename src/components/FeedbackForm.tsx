@@ -25,18 +25,24 @@ export default function FeedbackForm() {
     setError('');
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      // Using FormSubmit.co - emails will be sent to the email in the form
+      const response = await fetch('https://formsubmit.co/ajax/jensspace2025@gmail.com', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
         body: JSON.stringify({
-          access_key: '95169d0f-d7c6-4e80-aba1-fa32b7e21ddb',
           name: formData.name,
           email: formData.email,
           message: formData.feedback,
+          _subject: 'New Feedback from Chronic Haven',
         }),
       });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (data.success === 'true' || response.ok) {
         setSubmitted(true);
         setFormData({ name: '', email: '', feedback: '' });
         setTimeout(() => setSubmitted(false), 5000);
