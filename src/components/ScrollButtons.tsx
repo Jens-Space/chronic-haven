@@ -27,21 +27,19 @@ export default function ScrollButtons() {
     <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
       <Link
         href="/"
-        className="flex items-center gap-2 px-4 py-2 bg-white text-black border-2 border-purple-600 rounded-full font-semibold shadow-md hover:bg-purple-100 transition-all"
+        className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-full font-bold hover:bg-purple-700 transition-colors shadow-md"
         aria-label="Back to Home"
       >
-        <span>🏠</span>
-        <span>Home</span>
+        🏠 Home
       </Link>
       
       {showScroll && (
         <button
           onClick={scrollToTop}
-          className="flex items-center gap-2 px-4 py-2 bg-white text-black border-2 border-purple-600 rounded-full font-semibold shadow-md hover:bg-purple-100 transition-all"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-full font-bold hover:bg-purple-700 transition-colors shadow-md"
           aria-label="Back to Top"
         >
-          <span>⬆️</span>
-          <span>Top</span>
+          ⬆️ Top
         </button>
       )}
     </div>
