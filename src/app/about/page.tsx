@@ -287,15 +287,17 @@ export default function About() {
           </Link>
         </div>
 
-        {/* Footer Message */}
-        <div className="text-center mt-10 mb-6">
-          <p className="text-gray-500 font-medium">
-            💙 Thank you for being here. Take care of yourself today. 💙
-          </p>
-          <p className="text-gray-400 text-sm mt-2">
-            © 2025 Chronic Haven. All rights reserved.
-          </p>
-        </div>
+        {/* Footer */}
+        <footer className="bg-white border-t mt-12">
+          <div className="max-w-4xl mx-auto py-4 px-4">
+            <p className="text-center text-sm text-gray-500 mb-2">
+              This website provides educational and supportive information only and is not a substitute for professional medical care.
+            </p>
+            <p className="text-center text-xs text-gray-400">
+              © 2025 Chronic Haven. All rights reserved.
+            </p>
+          </div>
+        </footer>
       </div>
     </div>
   );
