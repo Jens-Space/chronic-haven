@@ -20,7 +20,7 @@ const Nav = () => {
   return (
     <nav className="px-4 py-2">
       <div className="container mx-auto">
-        <div className="flex items-center justify-center">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-3">
           <div aria-label="Chronic Haven Home">
             <Image
               src="/chronic-haven/logo.png"
@@ -46,7 +46,7 @@ const Nav = () => {
             </ul>
           </div>
           <button
-            className="md:hidden p-2 text-purple-600 ml-auto bg-purple-100 rounded-full hover:bg-purple-200 transition-colors"
+            className="md:hidden p-2 text-purple-600 bg-purple-100 rounded-full hover:bg-purple-200 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
