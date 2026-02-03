@@ -7,12 +7,13 @@ export default function FeedbackForm() {
     name: '',
     email: '',
     feedback: '',
+    feedbackType: 'general feedback',
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -38,6 +39,7 @@ export default function FeedbackForm() {
           message: formData.feedback,
           _subject: 'New Feedback from Chronic Haven Website',
           website: 'Chronic Haven',
+          feedbackType: formData.feedbackType,
           _template: 'table',
         }),
       });
@@ -46,7 +48,7 @@ export default function FeedbackForm() {
 
       if (data.success === 'true' || response.ok) {
         setSubmitted(true);
-        setFormData({ name: '', email: '', feedback: '' });
+        setFormData({ name: '', email: '', feedback: '', feedbackType: 'general feedback' });
         setTimeout(() => setSubmitted(false), 5000);
       } else {
         setError('Failed to send feedback. Please try again.');
@@ -92,6 +94,21 @@ export default function FeedbackForm() {
             required
             className="w-full px-4 py-3 border-2 border-purple-300 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all bg-white"
           />
+        </div>
+        
+        <div>
+          <label className="block text-gray-700 font-semibold mb-2">Feedback Type</label>
+          <select
+            name="feedbackType"
+            value={formData.feedbackType}
+            onChange={handleChange}
+            className="w-full px-4 py-3 border-2 border-purple-300 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all bg-white"
+          >
+            <option value="general feedback">General Feedback</option>
+            <option value="bug report">Bug Report</option>
+            <option value="feature request">Feature Request</option>
+            <option value="other">Other</option>
+          </select>
         </div>
         
         <div>
