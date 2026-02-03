@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import FeedbackForm from '@/components/FeedbackForm';
 
 export default function Home() {
   return (
@@ -150,6 +151,9 @@ export default function Home() {
           </p>
         </div>
       </div>
+
+      {/* Feedback Section */}
+      <FeedbackForm />
     </div>
   );
 }
