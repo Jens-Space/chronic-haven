@@ -13,6 +13,7 @@ A comprehensive, user-friendly website to help people with chronic conditions th
 ### 🛠️ Interactive Tools
 - **Fibro Support Assistant**: Intelligent chatbot providing contextual information with chat management
 - **Basic Community Forum**: Local storage-based forum for sharing experiences
+- **Feedback Form**: Friendly feedback page that emails submissions via FormSubmit
 
 ### 🎨 User Experience
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
@@ -23,11 +24,11 @@ A comprehensive, user-friendly website to help people with chronic conditions th
 ## 🛠️ Tech Stack
 
 ### Next.js Version
-- **Framework**: Next.js 15 with App Router and TypeScript
+- **Framework**: Next.js 16.1.4 with App Router and TypeScript
 - **Styling**: Tailwind CSS with custom design system
 - **Database**: SQLite with Prisma ORM (authentication foundation)
 - **State Management**: React hooks with local storage persistence
-- **Deployment**: Ready for Vercel, Netlify, or any Node.js hosting
+- **Deployment**: GitHub Pages static export (docs/) or any Node.js hosting
 
 ### Flask Version (Legacy)
 - **Framework**: Python Flask with Jinja2 templates
@@ -75,10 +76,12 @@ chronic-haven/
 │   │   ├── treatments/page.tsx# Treatments guide
 │   │   ├── resources/page.tsx # Resources directory
 │   │   ├── community/page.tsx # Community forum (basic)
+│   │   ├── feedback/page.tsx  # Feedback form
 │   │   ├── chatbot/page.tsx   # AI assistant
 │   │   └── api/               # API routes
 │   ├── components/            # Reusable components
-│   │   └── Nav.tsx           # Navigation component
+│   │   ├── Nav.tsx           # Navigation component
+│   │   └── FeedbackForm.tsx  # Feedback form component
 │   └── lib/                  # Utility functions
 │       └── auth.ts           # Authentication setup
 ├── prisma/                   # Database schema
@@ -142,7 +145,7 @@ chronic-haven/
 
 ## 📊 Project Metrics
 
-- **Total Pages**: 8 (Home + 6 content pages + 1 community)
+- **Total Pages**: 9 (Home + 6 content pages + community + feedback)
 - **Interactive Components**: 2 (Chatbot, Forum)
 - **Database Tables**: 6 (Users, Sessions, Accounts, etc.)
 - **External Links**: 15+ resource links
@@ -206,6 +209,13 @@ chronic-haven/
 - Updated all pages to have visible "Back to Top" buttons next to "Back to Home" buttons
 - Removed scroll-based floating back to top button
 - Now buttons are always visible and accessible at the bottom of each page
+
+### 2026-02-03 - Feedback & Navigation Updates
+- Added Feedback page and friendly feedback form
+- Feedback submissions now email via FormSubmit
+- Logo is clickable and acts as Home
+- Added Feedback to the main navigation menu
+- Fixed Back to Home button text visibility
 
 ### 2026-02-01 - Rebranding
 - Updated project name from "Fibro Support Hub" to "Chronic Haven"

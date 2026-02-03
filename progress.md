@@ -58,7 +58,7 @@
 
 ## 📊 Project Metrics
 
-- **Total Pages**: 8 (Home + 6 content pages + 1 community)
+- **Total Pages**: 9 (Home + 6 content pages + community + feedback)
 - **Interactive Components**: 2 (Chatbot, Forum)
 - **Database Tables**: 6 (Users, Sessions, Accounts, etc.)
 - **External Links**: 15+ resource links
@@ -78,7 +78,7 @@ The Chronic Haven website is complete with a welcoming, calming design and helpf
 
 ---
 
-*Last updated: February 2, 2026 at 19:30 UTC*
+*Last updated: February 3, 2026*
 
 ## Recent Update - 2026-02-02 (Navigation & Design Updates)
 - Changed navigation buttons to white background with black text for better readability
@@ -130,6 +130,13 @@ The Chronic Haven website is complete with a welcoming, calming design and helpf
 - Made buttons more purple with `bg-purple-600` and `hover:bg-purple-700`
 - Added `!important` to button text color to override globals.css link color
 - All buttons now display white text correctly
+
+## Recent Update - 2026-02-03 (Feedback & Navigation)
+- Added Feedback page with friendly form
+- Form submissions email via FormSubmit (no account required)
+- Logo now links to Home
+- Added Feedback to the main navigation menu
+- Restored bottom navigation buttons and fixed Back to Home text visibility
 
 ## Recent Update - 2026-02-02 (Navigation Updates)
 - Removed home link from logo
