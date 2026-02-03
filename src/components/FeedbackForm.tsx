@@ -47,64 +47,70 @@ export default function FeedbackForm() {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-md border border-blue-100 p-6">
-      <h2 className="text-3xl font-bold text-gray-800 mb-4">Share Your Feedback</h2>
-      <p className="text-gray-600 mb-6">We'd love to hear your thoughts, suggestions, or ideas for improving our community.</p>
+    <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 rounded-2xl shadow-md border-2 border-purple-200 p-8">
+      <div className="text-center mb-6">
+        <span className="text-5xl inline-block mb-3">💬</span>
+        <h2 className="text-4xl md:text-5xl font-black text-gray-800 mb-2">We'd Love Your Feedback! 💜</h2>
+        <p className="text-gray-600 text-lg">Your thoughts, suggestions, and ideas help us create a better space for everyone. We're listening!</p>
+      </div>
       
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4 max-w-2xl mx-auto">
         <div>
+          <label className="block text-gray-700 font-semibold mb-2">Your Name</label>
           <input
             type="text"
             name="name"
-            placeholder="Your Name"
+            placeholder="What should we call you?"
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border-2 border-purple-200 rounded-lg focus:outline-none focus:border-purple-500 transition-colors"
+            className="w-full px-4 py-3 border-2 border-purple-300 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all bg-white"
           />
         </div>
         
         <div>
+          <label className="block text-gray-700 font-semibold mb-2">Your Email</label>
           <input
             type="email"
             name="email"
-            placeholder="Your Email"
+            placeholder="So we can get back to you"
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border-2 border-purple-200 rounded-lg focus:outline-none focus:border-purple-500 transition-colors"
+            className="w-full px-4 py-3 border-2 border-purple-300 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all bg-white"
           />
         </div>
         
         <div>
+          <label className="block text-gray-700 font-semibold mb-2">Your Feedback or Ideas</label>
           <textarea
             name="feedback"
-            placeholder="Your feedback or ideas..."
+            placeholder="Tell us what you think! Share your ideas, suggestions, or just let us know how we're doing..."
             value={formData.feedback}
             onChange={handleChange}
             rows={5}
             required
-            className="w-full px-4 py-3 border-2 border-purple-200 rounded-lg focus:outline-none focus:border-purple-500 transition-colors resize-none"
+            className="w-full px-4 py-3 border-2 border-purple-300 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all resize-none bg-white"
           />
         </div>
         
         <button 
           type="submit" 
           disabled={loading}
-          className="w-full px-6 py-3 bg-purple-500 text-white font-bold rounded-lg hover:bg-purple-600 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+          className="w-full px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 disabled:from-gray-400 disabled:to-gray-400 disabled:cursor-not-allowed disabled:scale-100 shadow-lg"
         >
-          {loading ? 'Sending...' : 'Send Feedback'}
+          {loading ? '✨ Sending your feedback...' : '📨 Send Feedback'}
         </button>
 
         {submitted && (
-          <div className="p-4 bg-green-50 border-2 border-green-200 rounded-lg">
-            <p className="text-green-700 font-semibold">✓ Thanks for your feedback!</p>
+          <div className="p-4 bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 rounded-xl">
+            <p className="text-green-700 font-bold text-center text-lg">✨ Thank you so much! We really appreciate your feedback! 💜</p>
           </div>
         )}
 
         {error && (
-          <div className="p-4 bg-red-50 border-2 border-red-200 rounded-lg">
-            <p className="text-red-700 font-semibold">{error}</p>
+          <div className="p-4 bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-300 rounded-xl">
+            <p className="text-red-700 font-bold text-center">{error}</p>
           </div>
         )}
       </form>

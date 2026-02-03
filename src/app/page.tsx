@@ -153,7 +153,9 @@ export default function Home() {
       </div>
 
       {/* Feedback Section */}
-      <FeedbackForm />
+      <div id="feedback">
+        <FeedbackForm />
+      </div>
     </div>
   );
 }
