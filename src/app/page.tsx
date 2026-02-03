@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import FeedbackForm from '@/components/FeedbackForm';
 
 export default function Home() {
   return (
@@ -150,11 +149,6 @@ export default function Home() {
             Take things one day at a time. You've got this! ✨
           </p>
         </div>
-      </div>
-
-      {/* Feedback Section */}
-      <div id="feedback">
-        <FeedbackForm />
       </div>
     </div>
   );

@@ -8,29 +8,29 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/conditions', label: 'Conditions' },
     { href: '/symptoms', label: 'Symptoms' },
     { href: '/treatments', label: 'Treatments' },
     { href: '/resources', label: 'Resources' },
     { href: '/community', label: 'Community' },
+    { href: '/feedback', label: 'Feedback' },
   ];
 
   return (
     <nav className="px-4 py-2">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-center gap-3">
-          <div aria-label="Chronic Haven Home">
+          <Link href="/" aria-label="Chronic Haven Home">
             <Image
               src="/chronic-haven/logo.png"
               alt="Chronic Haven Logo"
               width={500}
               height={500}
-              className="object-contain" style={{ width: '300px', height: 'auto' }}
+              className="object-contain cursor-pointer hover:opacity-90 transition-opacity" style={{ width: '300px', height: 'auto' }}
               priority
             />
-          </div>
+          </Link>
           <div className="hidden md:flex gap-1">
             <ul className="flex gap-1">
               {navLinks.map((link) => (
