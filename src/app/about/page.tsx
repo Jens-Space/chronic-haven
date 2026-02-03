@@ -84,35 +84,35 @@ export default function About() {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="p-4 bg-white/80 rounded-xl text-center hover:scale-105 transition-transform duration-300 cursor-default">
+            <div className="p-4 bg-white/80 rounded-xl text-center cursor-default">
               <span className="text-3xl">🦋</span>
               <h3 className="font-bold text-pink-600 mt-2">Lupus</h3>
             </div>
-            <div className="p-4 bg-white/80 rounded-xl text-center hover:scale-105 transition-transform duration-300 cursor-default">
+            <div className="p-4 bg-white/80 rounded-xl text-center cursor-default">
               <span className="text-3xl">💨</span>
               <h3 className="font-bold text-purple-600 mt-2">Asthma</h3>
             </div>
-            <div className="p-4 bg-white/80 rounded-xl text-center hover:scale-105 transition-transform duration-300 cursor-default">
+            <div className="p-4 bg-white/80 rounded-xl text-center cursor-default">
               <span className="text-3xl">🌸</span>
               <h3 className="font-bold text-blue-600 mt-2">IBS</h3>
             </div>
-            <div className="p-4 bg-white/80 rounded-xl text-center hover:scale-105 transition-transform duration-300 cursor-default">
+            <div className="p-4 bg-white/80 rounded-xl text-center cursor-default">
               <span className="text-3xl">🦴</span>
               <h3 className="font-bold text-cyan-600 mt-2">CRPS</h3>
             </div>
-            <div className="p-4 bg-white/80 rounded-xl text-center hover:scale-105 transition-transform duration-300 cursor-default">
+            <div className="p-4 bg-white/80 rounded-xl text-center cursor-default">
               <span className="text-3xl">🤯</span>
               <h3 className="font-bold text-teal-600 mt-2">Fibromyalgia</h3>
             </div>
-            <div className="p-4 bg-white/80 rounded-xl text-center hover:scale-105 transition-transform duration-300 cursor-default">
+            <div className="p-4 bg-white/80 rounded-xl text-center cursor-default">
               <span className="text-3xl">⚡</span>
               <h3 className="font-bold text-green-600 mt-2">ME/CFS</h3>
             </div>
-            <div className="p-4 bg-white/80 rounded-xl text-center hover:scale-105 transition-transform duration-300 cursor-default">
+            <div className="p-4 bg-white/80 rounded-xl text-center cursor-default">
               <span className="text-3xl">🏃</span>
               <h3 className="font-bold text-yellow-600 mt-2">Endometriosis</h3>
             </div>
-            <div className="p-4 bg-white/80 rounded-xl text-center hover:scale-105 transition-transform duration-300 cursor-default">
+            <div className="p-4 bg-white/80 rounded-xl text-center cursor-default">
               <span className="text-3xl">🩸</span>
               <h3 className="font-bold text-orange-600 mt-2">Diabetes</h3>
             </div>
