@@ -36,7 +36,9 @@ export default function FeedbackForm() {
           name: formData.name,
           email: formData.email,
           message: formData.feedback,
-          _subject: 'New Feedback from Chronic Haven',
+          _subject: 'New Feedback from Chronic Haven Website',
+          website: 'Chronic Haven',
+          _template: 'table',
         }),
       });
 
