@@ -26,7 +26,7 @@ export default function FeedbackForm() {
 
     try {
       // Using FormSubmit.co - emails will be sent to the email in the form
-      const response = await fetch('https://formsubmit.co/ajax/jensspace2026@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/jensspacefeedback@gmail.com', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
