@@ -1,6 +1,6 @@
 # Chronic Haven Website
 
-A comprehensive, user-friendly website to help people with chronic conditions through information, community support, and AI assistance.
+A comprehensive, user-friendly website to help people with chronic conditions through information, community support.
 
 ## 🌟 Features
 

@@ -30,6 +30,12 @@ jobs:
         run: npm ci
       - name: Build with Next.js
         run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: '/chronic-haven'
+      - name: Create .nojekyll file
+        run: touch docs/.nojekyll
+      - name: List build output
+        run: ls -la docs/ && echo "---" && ls -la docs/_next/static/ | head -20
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
