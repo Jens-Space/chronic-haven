@@ -25,10 +25,15 @@ export default function FeedbackForm() {
     setError('');
 
     try {
-      const response = await fetch('/chronic-haven/api/feedback', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '95169d0f-d7c6-4e80-aba1-fa32b7e21ddb',
+          name: formData.name,
+          email: formData.email,
+          message: formData.feedback,
+        }),
       });
 
       if (response.ok) {
