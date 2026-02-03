@@ -1,6 +1,12 @@
 'use client';
 
+import Link from 'next/link';
+
 export default function Resources() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -153,6 +159,19 @@ export default function Resources() {
             Asking for support is a sign of strength. You've got this! ✨
           </p>
         </div>
+      </div>
+
+      {/* Navigation Buttons */}
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
+        <button
+          onClick={scrollToTop}
+          className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-full font-bold hover:bg-purple-700 transition-colors shadow-md"
+        >
+          Back to Top
+        </button>
+        <Link href="/" className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-full font-bold hover:bg-purple-700 transition-colors shadow-md">
+          Back to Home
+        </Link>
       </div>
 
     </div>

@@ -1,6 +1,12 @@
 'use client';
 
+import Link from 'next/link';
+
 export default function Conditions() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const conditions = [
     {
       name: 'Fibromyalgia',
@@ -172,6 +178,18 @@ export default function Conditions() {
             Every day you show up for yourself is a victory. Be gentle with yourself. ✨
           </p>
         </div>
+      </div>
+      {/* Navigation Buttons */}
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
+        <button
+          onClick={scrollToTop}
+          className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-full font-bold hover:bg-purple-700 transition-colors shadow-md"
+        >
+          Back to Top
+        </button>
+        <Link href="/" className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-full font-bold hover:bg-purple-700 transition-colors shadow-md">
+          Back to Home
+        </Link>
       </div>
 
     </div>
