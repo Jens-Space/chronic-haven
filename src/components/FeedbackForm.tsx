@@ -29,7 +29,7 @@ export default function FeedbackForm() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '95169d0f-d7c6-4e80-aba1-fa32b7e21ddb',
+          access_key: '95169d0f-d7c6-4e80-aba1-fa32b7e21ddb',
           name: formData.name,
           email: formData.email,
           message: formData.feedback,
