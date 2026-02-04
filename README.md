@@ -15,6 +15,7 @@ A comprehensive, user-friendly website to help people with chronic invisible ill
 ### 🛠️ Interactive Tools
 - **Community Forum**: Local storage-based forum for sharing experiences
 - **Feedback Form**: Friendly feedback page with type categorization (Bug Report, Feature Request, General Feedback, Other) that emails submissions via FormSubmit
+- **Scroll Buttons**: Convenient scroll-to-top and scroll-to-bottom buttons for easy navigation on long pages
 
 ### 🎨 User Experience
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
@@ -144,7 +145,7 @@ chronic-haven/
 ## 📊 Project Metrics
 
 - **Total Pages**: 9 (Home + 6 content pages + community + feedback)
-- **Interactive Components**: 2 (Community Forum, Feedback Form)
+- **Interactive Components**: 3 (Community Forum, Feedback Form, Scroll Buttons)
 - **Database Tables**: 6 (Users, Sessions, Accounts, etc.)
 - **External Links**: 15+ resource links
 
@@ -158,68 +159,39 @@ chronic-haven/
 
 ## 📝 Recent Updates
 
-### 2026-02-03 - Final Polish & Completion
-- **Navigation Updates**:
-  - Updated navbar to match wellbeing corner style
-  - Logo centered above navigation menu
-  - Hamburger menu appears below logo on smaller screens (laptop breakpoint)
-  - Switched hamburger icon from emoji to SVG for cleaner appearance
-  - Changed breakpoint from md to lg for better laptop compatibility
+### 2026-02-04 - Scroll Buttons & Final Touches
+- **Scroll Buttons Component**:
+  - Added scroll-to-top and scroll-to-bottom buttons
+  - Buttons appear on the right side of the page
+  - Smooth scrolling animation
+  - Appears on pages with substantial content
+  - Added to: About, Conditions, Symptoms, Treatments, and Resources pages
 
-- **Global Footer**:
-  - Added consistent footer across all pages
-  - Disclaimer: "Remember: This site provides information and tools but is not a substitute for professional medical advice."
-  - Copyright: "© 2026 Jen's Space. All rights reserved."
-  - Swapped text order and styling (disclaimer darker, copyright lighter)
-
-- **Feedback Form Enhancement**:
-  - Added feedback type dropdown with options: General Feedback, Bug Report, Feature Request, Other
-  - Added website identification in email submissions
-  - Updated email subject to "New Feedback from Chronic Haven Website" for easy identification
-  - Helps distinguish feedback from wellbeing corner website
-
-- **About Page Cleanup**:
-  - Removed hover effects from conditions cards (no longer look like buttons)
-  - Removed duplicate footer section (now using global footer)
-  - Conditions cards appear as static informational elements
-
-### 2026-02-02 - Navigation & Design Updates
-- Changed navigation buttons to white background with black text for better readability
-- Added purple border to navigation buttons for visibility
-- Replaced logo with transparent background version
-- Resized logo to 300px width
-- Removed link from logo (no longer clickable)
-- Centered navigation with logo and buttons together
-- Reduced button sizes for more compact appearance
-
-### 2026-02-02 - Button Styling
-- Made buttons more purple with `bg-purple-600` and `hover:bg-purple-700`
-- Added `!important` to button text color to override globals.css link color
-- All buttons now display white text correctly
-
-### 2026-02-03 - Feedback & Navigation
-- Added Feedback page and friendly feedback form
-- Form submissions email via FormSubmit (no account required)
-- Logo is clickable and acts as Home
-- Added Feedback to the main navigation menu
-- Fixed Back to Home button text visibility
-
-### 2026-02-01 - Rebranding
-- Updated project name from "Fibro Support Hub" to "Chronic Haven"
-- Updated all references throughout documentation to reflect new branding
-- Maintained all features and functionality while updating project identity
-
-### 2026-02-01 - GitHub Pages Deployment
-- Added `trailingSlash: true` to next.config.ts for GitHub Pages compatibility
-- Added `basePath: '/chronic-haven'` to serve site at https://jens-space.github.io/chronic-haven/
-- Added `.nojekyll` file to prevent GitHub Pages from processing site with Jekyll
-- CSS files now load correctly through GitHub Pages
-- Site successfully deployed and accessible at https://jens-space.github.io/chronic-haven/
+- **Python Server Support**:
+  - Added `app.py` for Python-based server deployment
+  - Added `server.js` for Node.js server option
+  - Alternative deployment options for production
 
 ## 🌐 Deployment
 
 The website is deployed on GitHub Pages and accessible at:
 **https://jens-space.github.io/chronic-haven/**
+
+### Deployment Options
+
+1. **GitHub Pages** (current)
+   - Run `npm run build` to generate static files in `docs/`
+   - Push to GitHub to deploy automatically
+
+2. **Python Server**
+   ```bash
+   python app.py
+   ```
+
+3. **Node.js Server**
+   ```bash
+   node server.js
+   ```
 
 ## 🤝 Contributing
 
