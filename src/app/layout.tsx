@@ -40,7 +40,7 @@ export default function RootLayout({
               Remember: This site provides information and tools but is not a substitute for professional medical advice.
             </p>
             <p className="text-gray-500 text-xs">
-              © 2026 Jen's Space. All rights reserved.
+              © 2026 Jens-Space | All rights reserved.
             </p>
           </div>
         </footer>
