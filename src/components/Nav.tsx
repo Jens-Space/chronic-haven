@@ -38,7 +38,7 @@ const Nav = () => {
         <div className="flex justify-center mb-3 lg:mb-0">
           <Link href="/" aria-label="Chronic Haven Home">
             <Image
-              src="/chronic-haven/logo.png"
+              src="/logo.png"
               alt="Chronic Haven Logo"
               width={500}
               height={500}

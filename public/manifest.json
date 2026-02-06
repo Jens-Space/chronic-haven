@@ -13,7 +13,7 @@
   "categories": ["health", "medical", "lifestyle"],
   "icons": [
     {
-      "src": "/chronic-haven/logo.png",
+      "src": "/logo.png",
       "sizes": "any",
       "type": "image/png",
       "purpose": "any"
@@ -21,7 +21,7 @@
   ],
   "screenshots": [
     {
-      "src": "/chronic-haven/logo.png",
+      "src": "/logo.png",
       "sizes": "any",
       "type": "image/png",
       "form_factor": "wide",
