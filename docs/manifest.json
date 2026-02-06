@@ -2,18 +2,18 @@
   "name": "Chronic Haven",
   "short_name": "Chronic Haven",
   "description": "A safe, welcoming space for people with chronic invisible illnesses",
-  "start_url": "/",
+  "start_url": "/chronic-haven/",
+  "scope": "/chronic-haven/",
   "display": "standalone",
   "display_override": ["standalone", "browser"],
   "background_color": "#ffffff",
   "theme_color": "#8b5cf6",
   "orientation": "portrait-primary",
-  "scope": "/",
   "lang": "en",
   "categories": ["health", "medical", "lifestyle"],
   "icons": [
     {
-      "src": "/logo.png",
+      "src": "/chronic-haven/logo.png",
       "sizes": "any",
       "type": "image/png",
       "purpose": "any"
@@ -24,7 +24,7 @@
       "name": "Get Support",
       "short_name": "Support",
       "description": "Chat with our AI support",
-      "url": "/community"
+      "url": "/chronic-haven/community"
     }
   ],
   "related_applications": [],

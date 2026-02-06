@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Chronic Haven",
   description: "A safe, welcoming space for people with chronic invisible illnesses.",
-  manifest: "/manifest.json",
+  manifest: "/chronic-haven/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -68,7 +68,7 @@ export default function RootLayout({
               (function() {
                 if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
                   window.addEventListener('load', function() {
-                    navigator.serviceWorker.register('/sw.js')
+                    navigator.serviceWorker.register('/chronic-haven/sw.js')
                       .then(function(registration) {
                         console.log('SW registered:', registration.scope);
                       })
