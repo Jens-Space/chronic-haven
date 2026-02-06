@@ -21,12 +21,6 @@
   "screenshots": [],
   "shortcuts": [
     {
-      "name": "Track Symptoms",
-      "short_name": "Track",
-      "description": "Log your daily symptoms",
-      "url": "/tracker"
-    },
-    {
       "name": "Get Support",
       "short_name": "Support",
       "description": "Chat with our AI support",

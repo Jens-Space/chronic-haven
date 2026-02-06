@@ -46,7 +46,6 @@ const Nav = () => {
     { href: '/conditions', label: 'Conditions' },
     { href: '/symptoms', label: 'Symptoms' },
     { href: '/treatments', label: 'Treatments' },
-    { href: '/tracker', label: 'Tracker', icon: '📊' },
     { href: '/resources', label: 'Resources' },
     { href: '/community', label: 'Community' },
     { href: '/feedback', label: 'Feedback' },
@@ -75,9 +74,8 @@ const Nav = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="px-4 py-2 bg-white text-black border-2 border-purple-600 rounded-full transition-all duration-300 font-semibold text-base md:text-lg shadow-md hover:bg-purple-100 flex items-center gap-1"
+                    className="px-4 py-2 bg-white text-black border-2 border-purple-600 rounded-full transition-all duration-300 font-semibold text-base md:text-lg shadow-md hover:bg-purple-100"
                   >
-                    {link.icon && <span>{link.icon}</span>}
                     {link.label}
                   </Link>
                 </li>
@@ -109,10 +107,9 @@ const Nav = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block py-3 px-4 bg-white text-black border border-purple-300 hover:text-purple-900 hover:bg-purple-100 rounded-lg transition-all duration-300 font-medium text-lg flex items-center justify-center gap-2"
+                    className="block py-3 px-4 bg-white text-black border border-purple-300 hover:text-purple-900 hover:bg-purple-100 rounded-lg transition-all duration-300 font-medium text-lg"
                     onClick={() => setIsOpen(false)}
                   >
-                    {link.icon && <span>{link.icon}</span>}
                     {link.label}
                   </Link>
                 </li>
