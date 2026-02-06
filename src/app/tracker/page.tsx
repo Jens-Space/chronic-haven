@@ -23,7 +23,6 @@ export default function TrackerPage() {
     concentration: 5,
     notes: '',
   });
-  const [loading, setLoading] = useState(false);
   const [offline, setOffline] = useState(false);
 
   useEffect(() => {
@@ -36,14 +35,11 @@ export default function TrackerPage() {
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
     
-    // Load entries from localStorage for offline access
+    // Load entries from localStorage
     const cached = localStorage.getItem('symptomEntries');
     if (cached) {
       setEntries(JSON.parse(cached));
     }
-    
-    // Fetch entries from API
-    fetchEntries();
     
     return () => {
       window.removeEventListener('online', handleOnline);
@@ -51,67 +47,39 @@ export default function TrackerPage() {
     };
   }, []);
 
-  const fetchEntries = async () => {
-    try {
-      const response = await fetch('/api/symptoms');
-      if (response.ok) {
-        const data = await response.json();
-        setEntries(data);
-        localStorage.setItem('symptomEntries', JSON.stringify(data));
-      }
-    } catch (error) {
-      console.log('Using cached entries');
-    }
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
 
-    const entry = {
-      ...formData,
+    const entry: SymptomEntry = {
+      id: `entry-${Date.now()}`,
       date: new Date().toISOString(),
+      pain: formData.pain,
+      fatigue: formData.fatigue,
+      sleep: formData.sleep,
+      mood: formData.mood,
+      concentration: formData.concentration,
+      notes: formData.notes,
     };
 
-    try {
-      const response = await fetch('/api/symptoms', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(entry),
-      });
+    const updatedEntries = [entry, ...entries];
+    setEntries(updatedEntries);
+    localStorage.setItem('symptomEntries', JSON.stringify(updatedEntries));
+    
+    // Reset form
+    setFormData({
+      pain: 5,
+      fatigue: 5,
+      sleep: 5,
+      mood: 5,
+      concentration: 5,
+      notes: '',
+    });
+  };
 
-      if (response.ok) {
-        const newEntry = await response.json();
-        const updatedEntries = [newEntry, ...entries];
-        setEntries(updatedEntries);
-        localStorage.setItem('symptomEntries', JSON.stringify(updatedEntries));
-        
-        // Reset form
-        setFormData({
-          pain: 5,
-          fatigue: 5,
-          sleep: 5,
-          mood: 5,
-          concentration: 5,
-          notes: '',
-        });
-      }
-    } catch (error) {
-      // Store locally for offline sync
-      const offlineEntries = JSON.parse(localStorage.getItem('offlineSymptoms') || '[]');
-      offlineEntries.push(entry);
-      localStorage.setItem('offlineSymptoms', JSON.stringify(offlineEntries));
-      
-      // Update local display
-      const newEntry = { ...entry, id: `offline-${Date.now()}` };
-      const updatedEntries = [newEntry, ...entries];
-      setEntries(updatedEntries);
-      localStorage.setItem('symptomEntries', JSON.stringify(updatedEntries));
-      
-      alert('Saved offline - will sync when online');
-    }
-
-    setLoading(false);
+  const handleDelete = (id: string) => {
+    const updatedEntries = entries.filter((e) => e.id !== id);
+    setEntries(updatedEntries);
+    localStorage.setItem('symptomEntries', JSON.stringify(updatedEntries));
   };
 
   const sliderStyle = (value: number) => ({
@@ -129,7 +97,7 @@ export default function TrackerPage() {
           {offline && (
             <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-yellow-500 text-white rounded-lg">
               <span>📴</span>
-              <span>You're offline - data will sync when connected</span>
+              <span>You're offline - data saved locally</span>
             </div>
           )}
         </div>
@@ -260,17 +228,31 @@ export default function TrackerPage() {
           {/* Submit Button */}
           <button
             type="submit"
-            disabled={loading}
-            className="w-full py-4 bg-purple-500 text-white rounded-xl font-bold text-lg shadow-md hover:bg-purple-600 transition-colors disabled:opacity-50"
+            className="w-full py-4 bg-purple-500 text-white rounded-xl font-bold text-lg shadow-md hover:bg-purple-600 transition-colors"
           >
-            {loading ? 'Saving...' : '💾 Save Entry'}
+            💾 Save Entry
           </button>
         </form>
       </div>
 
       {/* Recent Entries */}
       <div className="bg-white rounded-2xl shadow-md border border-blue-100 p-6">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">📅 Recent Entries</h2>
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-2xl font-bold text-gray-800">📅 Recent Entries</h2>
+          {entries.length > 0 && (
+            <button
+              onClick={() => {
+                if (confirm('Clear all entries?')) {
+                  setEntries([]);
+                  localStorage.removeItem('symptomEntries');
+                }
+              }}
+              className="px-4 py-2 text-red-500 border border-red-300 rounded-lg hover:bg-red-50 transition-colors text-sm"
+            >
+              Clear All
+            </button>
+          )}
+        </div>
         
         {entries.length === 0 ? (
           <p className="text-gray-500 text-center py-8">No entries yet. Start tracking your symptoms above!</p>
@@ -279,9 +261,18 @@ export default function TrackerPage() {
             {entries.slice(0, 10).map((entry) => (
               <div
                 key={entry.id}
-                className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-4 border border-purple-100"
+                className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-4 border border-purple-100 relative group"
               >
-                <div className="flex justify-between items-center mb-3">
+                <button
+                  onClick={() => handleDelete(entry.id)}
+                  className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 text-red-400 hover:text-red-600 transition-opacity"
+                  title="Delete entry"
+                >
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                <div className="flex justify-between items-center mb-3 pr-8">
                   <span className="font-semibold text-gray-800">
                     {new Date(entry.date).toLocaleDateString('en-US', {
                       weekday: 'short',
