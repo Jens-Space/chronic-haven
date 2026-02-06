@@ -4,6 +4,7 @@
   "description": "A safe, welcoming space for people with chronic invisible illnesses",
   "start_url": "/",
   "display": "standalone",
+  "display_override": ["standalone", "browser"],
   "background_color": "#ffffff",
   "theme_color": "#8b5cf6",
   "orientation": "portrait-primary",
@@ -18,7 +19,6 @@
       "purpose": "any"
     }
   ],
-  "screenshots": [],
   "shortcuts": [
     {
       "name": "Get Support",
