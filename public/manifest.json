@@ -6,7 +6,7 @@
   "scope": "/chronic-haven/",
   "display": "standalone",
   "display_override": ["standalone", "browser"],
-  "background_color": "#8b5cf6",
+  "background_color": "#ffffff",
   "theme_color": "#8b5cf6",
   "orientation": "portrait-primary",
   "lang": "en",
@@ -17,6 +17,15 @@
       "sizes": "any",
       "type": "image/png",
       "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Chronic Haven - Welcome"
     }
   ],
   "shortcuts": [
