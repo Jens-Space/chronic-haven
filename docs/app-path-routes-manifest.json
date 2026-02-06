@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/api/feedback/route": "/api/feedback",
+  "/api/symptoms/route": "/api/symptoms",
+  "/community/page": "/community",
+  "/conditions/page": "/conditions",
+  "/favicon.ico/route": "/favicon.ico",
+  "/feedback/page": "/feedback",
+  "/page": "/",
+  "/resources/page": "/resources",
+  "/symptoms/page": "/symptoms",
+  "/tracker/page": "/tracker",
+  "/treatments/page": "/treatments"
+}

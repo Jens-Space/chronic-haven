@@ -2,16 +2,51 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [installable, setInstallable] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+
+  useEffect(() => {
+    // PWA install prompt handler
+    const handleBeforeInstallPrompt = (e: Event) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+      setInstallable(true);
+    };
+
+    const handleAppInstalled = () => {
+      setInstallable(false);
+    };
+
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    window.addEventListener('appinstalled', handleAppInstalled);
+
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+      window.removeEventListener('appinstalled', handleAppInstalled);
+    };
+  }, []);
+
+  const handleInstallClick = async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        setInstallable(false);
+      }
+      setDeferredPrompt(null);
+    }
+  };
 
   const navLinks = [
     { href: '/about', label: 'About' },
     { href: '/conditions', label: 'Conditions' },
     { href: '/symptoms', label: 'Symptoms' },
     { href: '/treatments', label: 'Treatments' },
+    { href: '/tracker', label: 'Tracker', icon: '📊' },
     { href: '/resources', label: 'Resources' },
     { href: '/community', label: 'Community' },
     { href: '/feedback', label: 'Feedback' },
@@ -40,13 +75,22 @@ const Nav = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="px-4 py-2 bg-white text-black border-2 border-purple-600 rounded-full transition-all duration-300 font-semibold text-base md:text-lg shadow-md hover:bg-purple-100"
+                    className="px-4 py-2 bg-white text-black border-2 border-purple-600 rounded-full transition-all duration-300 font-semibold text-base md:text-lg shadow-md hover:bg-purple-100 flex items-center gap-1"
                   >
+                    {link.icon && <span>{link.icon}</span>}
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
+            {installable && (
+              <button
+                onClick={handleInstallClick}
+                className="px-4 py-2 bg-purple-600 text-white border-2 border-purple-600 rounded-full transition-all duration-300 font-semibold text-base md:text-lg shadow-md hover:bg-purple-700"
+              >
+                📱 Install App
+              </button>
+            )}
           </div>
           <button
             className="lg:hidden p-3 text-white bg-purple-600 rounded-full hover:bg-purple-700 transition-colors shadow-md flex items-center justify-center"
@@ -65,13 +109,27 @@ const Nav = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block py-3 px-4 bg-white text-black border border-purple-300 hover:text-white hover:bg-purple-600 rounded-lg transition-all duration-300 font-medium text-lg"
+                    className="block py-3 px-4 bg-white text-black border border-purple-300 hover:text-purple-900 hover:bg-purple-100 rounded-lg transition-all duration-300 font-medium text-lg flex items-center justify-center gap-2"
                     onClick={() => setIsOpen(false)}
                   >
+                    {link.icon && <span>{link.icon}</span>}
                     {link.label}
                   </Link>
                 </li>
               ))}
+              {installable && (
+                <li>
+                  <button
+                    onClick={() => {
+                      handleInstallClick();
+                      setIsOpen(false);
+                    }}
+                    className="w-full py-3 px-4 bg-purple-600 text-white border border-purple-600 rounded-lg transition-all duration-300 font-medium text-lg flex items-center justify-center gap-2"
+                  >
+                    📱 Install App
+                  </button>
+                </li>
+              )}
             </ul>
           </div>
         )}

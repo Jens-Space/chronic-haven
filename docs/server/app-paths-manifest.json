@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/api/feedback/route": "app/api/feedback/route.js",
+  "/api/symptoms/route": "app/api/symptoms/route.js",
+  "/community/page": "app/community/page.js",
+  "/conditions/page": "app/conditions/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/feedback/page": "app/feedback/page.js",
+  "/page": "app/page.js",
+  "/resources/page": "app/resources/page.js",
+  "/symptoms/page": "app/symptoms/page.js",
+  "/tracker/page": "app/tracker/page.js",
+  "/treatments/page": "app/treatments/page.js"
+}
