@@ -19,6 +19,15 @@
       "purpose": "any"
     }
   ],
+  "screenshots": [
+    {
+      "src": "/chronic-haven/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Chronic Haven - Welcome"
+    }
+  ],
   "shortcuts": [
     {
       "name": "Get Support",

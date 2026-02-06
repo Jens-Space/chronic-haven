@@ -11,7 +11,7 @@ const Nav = () => {
     // Register service worker
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
+        navigator.serviceWorker.register('/chronic-haven/sw.js')
           .then((registration) => {
             console.log('SW registered:', registration.scope);
           })
@@ -31,17 +31,6 @@ const Nav = () => {
     { href: '/community', label: 'Community' },
     { href: '/feedback', label: 'Feedback' },
   ];
-
-  const isFirefox = typeof navigator !== 'undefined' && /Firefox/i.test(navigator.userAgent);
-
-  const handleAddToHomeScreen = () => {
-    // Show instructions based on browser
-    if (isFirefox) {
-      alert('To install on Firefox:\n\n1. Tap the menu button (⋮)\n2. Tap "Install" or "Add to Home Screen"\n\nIf you don\'t see this option, try:\nSettings → "Install Chronic Haven"');
-    } else {
-      alert('To install:\n\n1. Tap the menu button (⋮)\n2. Tap "Add to Home Screen" or "Install App"');
-    }
-  };
 
   return (
     <nav className="px-4 py-2 bg-white">
@@ -73,13 +62,6 @@ const Nav = () => {
                 </li>
               ))}
             </ul>
-            <button
-              onClick={handleAddToHomeScreen}
-              className="px-4 py-2 bg-purple-600 text-white border-2 border-purple-600 rounded-full transition-all duration-300 font-semibold text-base md:text-lg shadow-md hover:bg-purple-700"
-              title="Add to Home Screen"
-            >
-              📱 Add to Home Screen
-            </button>
           </div>
           <button
             className="lg:hidden p-3 text-white bg-purple-600 rounded-full hover:bg-purple-700 transition-colors shadow-md flex items-center justify-center"
@@ -105,17 +87,6 @@ const Nav = () => {
                   </Link>
                 </li>
               ))}
-              <li>
-                <button
-                  onClick={() => {
-                    handleAddToHomeScreen();
-                    setIsOpen(false);
-                  }}
-                  className="w-full py-3 px-4 bg-purple-600 text-white border border-purple-600 rounded-lg transition-all duration-300 font-medium text-lg flex items-center justify-center gap-2"
-                >
-                  📱 Add to Home Screen
-                </button>
-              </li>
             </ul>
           </div>
         )}
