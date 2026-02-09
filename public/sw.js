@@ -11,6 +11,7 @@ const urlsToCache = [
   '/feedback/',
   '/tracker/',
   '/manifest.json',
+  '/logo.png',
   '/icons/icon-192x192.png',
   '/icons/icon-512x512.png',
 ];
