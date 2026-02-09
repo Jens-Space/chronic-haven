@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 const Nav = () => {
@@ -33,61 +32,71 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="px-4 py-2 bg-white">
-      <div className="container mx-auto">
-        <div className="flex justify-center mb-3 lg:mb-0">
-          <Link href="/" aria-label="Chronic Haven Home">
-            <img
-              src="/chronic-haven/logo.png"
-              alt="Chronic Haven Logo"
-              className="cursor-pointer hover:opacity-90 transition-opacity w-[200px] lg:w-[400px] h-auto"
-            />
-          </Link>
-        </div>
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-3">
-          <div className="hidden lg:flex gap-1">
-            <ul className="flex gap-1">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="px-4 py-2 bg-white text-black border-2 border-purple-600 rounded-full transition-all duration-300 font-semibold text-base md:text-lg shadow-md hover:bg-purple-100"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+    <>
+      <style>{`
+        @media (min-width: 1024px) {
+          .website-logo {
+            width: 400px !important;
+          }
+        }
+      `}</style>
+      <nav className="px-4 py-2 bg-white">
+        <div className="container mx-auto">
+          <div className="flex justify-center mb-3 lg:mb-0">
+            <Link href="/" aria-label="Chronic Haven Home">
+              <img
+                src="/chronic-haven/logo.png"
+                alt="Chronic Haven Logo"
+                className="website-logo cursor-pointer hover:opacity-90 transition-opacity"
+                style={{ width: '200px', height: 'auto', display: 'block' }}
+              />
+            </Link>
           </div>
-          <button
-            className="lg:hidden p-3 text-white bg-purple-600 rounded-full hover:bg-purple-700 transition-colors shadow-md flex items-center justify-center"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-        {isOpen && (
-          <div className="lg:hidden bg-white/95 backdrop-blur-sm mt-2 pb-4 rounded-xl shadow-lg border border-purple-200 mx-2">
-            <ul className="space-y-2 px-2 text-center">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="block py-3 px-4 bg-white text-black border border-purple-300 hover:text-purple-900 hover:bg-purple-100 rounded-lg transition-all duration-300 font-medium text-lg"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-3">
+            <div className="hidden lg:flex gap-1">
+              <ul className="flex gap-1">
+                {navLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="px-4 py-2 bg-white text-black border-2 border-purple-600 rounded-full transition-all duration-300 font-semibold text-base md:text-lg shadow-md hover:bg-purple-100"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <button
+              className="lg:hidden p-3 text-white bg-purple-600 rounded-full hover:bg-purple-700 transition-colors shadow-md flex items-center justify-center"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
-        )}
-      </div>
-    </nav>
+          {isOpen && (
+            <div className="lg:hidden bg-white/95 backdrop-blur-sm mt-2 pb-4 rounded-xl shadow-lg border border-purple-200 mx-2">
+              <ul className="space-y-2 px-2 text-center">
+                {navLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="block py-3 px-4 bg-white text-black border border-purple-300 hover:text-purple-900 hover:bg-purple-100 rounded-lg transition-all duration-300 font-medium text-lg"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </nav>
+    </>
   );
 };
 
