@@ -38,6 +38,11 @@ const Nav = () => {
           width: 300px !important;
           height: auto !important;
         }
+        @media (min-width: 1024px) {
+          .website-logo {
+            width: 400px !important;
+          }
+        }
       `}</style>
       <nav className="px-4 py-2 bg-white">
         <div className="container mx-auto">
