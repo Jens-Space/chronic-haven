@@ -38,7 +38,7 @@ const Nav = () => {
         <div className="flex justify-center mb-3 lg:mb-0">
           <Link href="/" aria-label="Chronic Haven Home">
             <img
-              src="/logo.png"
+              src="/chronic-haven/logo.png"
               alt="Chronic Haven Logo"
               className="object-contain cursor-pointer hover:opacity-90 transition-opacity"
               style={{ width: '300px', height: 'auto' }}

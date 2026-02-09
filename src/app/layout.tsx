@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     "apple-mobile-web-app-status-bar-style": "default",
   },
   icons: [
-    { rel: "icon", url: "/icons/icon-192x192.png", sizes: "192x192" },
-    { rel: "icon", url: "/icons/icon-512x512.png", sizes: "512x512" },
-    { rel: "apple-touch-icon", url: "/icons/icon-192x192.png", sizes: "192x192" },
+    { rel: "icon", url: "/chronic-haven/icons/icon-192x192.png", sizes: "192x192" },
+    { rel: "icon", url: "/chronic-haven/icons/icon-512x512.png", sizes: "512x512" },
+    { rel: "apple-touch-icon", url: "/chronic-haven/icons/icon-192x192.png", sizes: "192x192" },
   ],
 };
 
