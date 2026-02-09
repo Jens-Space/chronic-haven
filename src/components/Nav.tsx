@@ -37,14 +37,11 @@ const Nav = () => {
       <div className="container mx-auto">
         <div className="flex justify-center mb-3 lg:mb-0">
           <Link href="/" aria-label="Chronic Haven Home">
-            <Image
+            <img
               src="/logo.png"
               alt="Chronic Haven Logo"
-              width={500}
-              height={500}
               className="object-contain cursor-pointer hover:opacity-90 transition-opacity"
               style={{ width: '300px', height: 'auto' }}
-              priority
             />
           </Link>
         </div>

@@ -18,6 +18,8 @@ const urlsToCache = [
 
 // Install event - cache assets
 self.addEventListener('install', (event) => {
+  // Skip waiting immediately for updates
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
@@ -28,11 +30,11 @@ self.addEventListener('install', (event) => {
         console.log('Cache install error:', error);
       })
   );
-  self.skipWaiting();
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
+  // Claim clients immediately
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
@@ -43,9 +45,10 @@ self.addEventListener('activate', (event) => {
           }
         })
       );
+    }).then(() => {
+      return self.clients.claim();
     })
   );
-  self.clients.claim();
 });
 
 // Fetch event - serve from cache, fallback to network
