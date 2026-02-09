@@ -25,9 +25,6 @@ export const metadata: Metadata = {
     { rel: "icon", url: "/favicon.ico", sizes: "any" },
     { rel: "apple-touch-icon", url: "/chronic-haven/icons/icon-192x192.png", sizes: "192x192" },
   ],
-  links: [
-    { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-  ],
 };
 
 export const viewport: Viewport = {

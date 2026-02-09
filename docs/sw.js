@@ -1,4 +1,4 @@
-const CACHE_NAME = 'chronic-haven-v2';
+const CACHE_NAME = 'chronic-haven-v3';
 const urlsToCache = [
   '/chronic-haven/',
   '/chronic-haven/index.html',
