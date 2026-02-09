@@ -1,18 +1,18 @@
 const CACHE_NAME = 'chronic-haven-v1';
 const urlsToCache = [
-  '/chronic-haven/',
-  '/chronic-haven/index.html',
-  '/chronic-haven/about/',
-  '/chronic-haven/community/',
-  '/chronic-haven/conditions/',
-  '/chronic-haven/resources/',
-  '/chronic-haven/symptoms/',
-  '/chronic-haven/treatments/',
-  '/chronic-haven/feedback/',
-  '/chronic-haven/tracker/',
-  '/chronic-haven/manifest.json',
-  '/chronic-haven/icons/icon-192x192.png',
-  '/chronic-haven/icons/icon-512x512.png',
+  '/',
+  '/index.html',
+  '/about/',
+  '/community/',
+  '/conditions/',
+  '/resources/',
+  '/symptoms/',
+  '/treatments/',
+  '/feedback/',
+  '/tracker/',
+  '/manifest.json',
+  '/icons/icon-192x192.png',
+  '/icons/icon-512x512.png',
 ];
 
 // Install event - cache assets
@@ -73,7 +73,7 @@ self.addEventListener('fetch', (event) => {
       .catch(() => {
         // Return a fallback for navigation requests
         if (event.request.mode === 'navigate') {
-          return caches.match('/chronic-haven/index.html');
+          return caches.match('/index.html');
         }
       })
   );
