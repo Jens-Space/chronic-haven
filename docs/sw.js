@@ -1,4 +1,4 @@
-const CACHE_NAME = 'chronic-haven-v3';
+const CACHE_NAME = 'chronic-haven-v4';
 const urlsToCache = [
   '/chronic-haven/',
   '/chronic-haven/index.html',
@@ -14,6 +14,7 @@ const urlsToCache = [
   '/chronic-haven/logo.png',
   '/chronic-haven/icons/icon-192x192.png',
   '/chronic-haven/icons/icon-512x512.png',
+  '/chronic-haven/favicon.ico',
 ];
 
 // Install event - cache assets
@@ -41,8 +42,31 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch event - serve from cache, fallback to network
+// Fetch event - serve from network first, fallback to cache
 self.addEventListener('fetch', (event) => {
+  // For icon requests, always try network first
+  if (event.request.url.includes('/icons/') || event.request.url.includes('/favicon.ico')) {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          // Cache successful responses
+          if (response && response.status === 200) {
+            const responseClone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseClone);
+            });
+          }
+          return response;
+        })
+        .catch(() => {
+          // Fallback to cache if network fails
+          return caches.match(event.request);
+        })
+    );
+    return;
+  }
+  
+  // For other requests, use cache-first strategy
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
