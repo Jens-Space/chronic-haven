@@ -40,8 +40,7 @@ const Nav = () => {
             <img
               src="/chronic-haven/logo.png"
               alt="Chronic Haven Logo"
-              className="cursor-pointer hover:opacity-90 transition-opacity"
-              style={{ width: '300px', height: 'auto', display: 'block' }}
+              className="cursor-pointer hover:opacity-90 transition-opacity w-[200px] lg:w-[400px] h-auto"
             />
           </Link>
         </div>
