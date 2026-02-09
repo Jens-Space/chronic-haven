@@ -5,6 +5,7 @@ import Nav from "@/components/Nav";
 export const metadata: Metadata = {
   title: "Chronic Haven",
   description: "A safe, welcoming space for people with chronic invisible illnesses.",
+  metadataBase: new URL('https://jens-space.github.io'),
   manifest: "/chronic-haven/manifest.json",
   appleWebApp: {
     capable: true,
@@ -14,6 +15,30 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
+  icons: [
+    { rel: "icon", url: "/favicon.ico", sizes: "any" },
+    { rel: "icon", type: "image/png", url: "/chronic-haven/icons/icon-72x72.png", sizes: "72x72" },
+    { rel: "icon", type: "image/png", url: "/chronic-haven/icons/icon-96x96.png", sizes: "96x96" },
+    { rel: "icon", type: "image/png", url: "/chronic-haven/icons/icon-128x128.png", sizes: "128x128" },
+    { rel: "icon", type: "image/png", url: "/chronic-haven/icons/icon-144x144.png", sizes: "144x144" },
+    { rel: "icon", type: "image/png", url: "/chronic-haven/icons/icon-150x150.png", sizes: "150x150" },
+    { rel: "icon", type: "image/png", url: "/chronic-haven/icons/icon-152x152.png", sizes: "152x152" },
+    { rel: "icon", type: "image/png", url: "/chronic-haven/icons/icon-192x192.png", sizes: "192x192" },
+    { rel: "icon", type: "image/png", url: "/chronic-haven/icons/icon-310x310.png", sizes: "310x310" },
+    { rel: "icon", type: "image/png", url: "/chronic-haven/icons/icon-384x384.png", sizes: "384x384" },
+    { rel: "icon", type: "image/png", url: "/chronic-haven/icons/icon-512x512.png", sizes: "512x512" },
+    { rel: "apple-touch-icon", url: "/chronic-haven/icons/icon-72x72.png", sizes: "72x72" },
+    { rel: "apple-touch-icon", url: "/chronic-haven/icons/icon-96x96.png", sizes: "96x96" },
+    { rel: "apple-touch-icon", url: "/chronic-haven/icons/icon-128x128.png", sizes: "128x128" },
+    { rel: "apple-touch-icon", url: "/chronic-haven/icons/icon-144x144.png", sizes: "144x144" },
+    { rel: "apple-touch-icon", url: "/chronic-haven/icons/icon-150x150.png", sizes: "150x150" },
+    { rel: "apple-touch-icon", url: "/chronic-haven/icons/icon-152x152.png", sizes: "152x152" },
+    { rel: "apple-touch-icon", url: "/chronic-haven/icons/icon-192x192.png", sizes: "192x192" },
+    { rel: "apple-touch-icon", url: "/chronic-haven/icons/icon-310x310.png", sizes: "310x310" },
+    { rel: "apple-touch-icon", url: "/chronic-haven/icons/icon-384x384.png", sizes: "384x384" },
+    { rel: "apple-touch-icon", url: "/chronic-haven/icons/icon-512x512.png", sizes: "512x512" },
+    { rel: "maskable-icon", url: "/chronic-haven/icons/icon-512x512.png", sizes: "512x512" },
+  ],
   other: {
     "msapplication-config": "/browserconfig.xml",
     "mobile-web-app-capable": "yes",
