@@ -22,7 +22,11 @@ export const metadata: Metadata = {
   icons: [
     { rel: "icon", url: "/chronic-haven/icons/icon-192x192.png", sizes: "192x192" },
     { rel: "icon", url: "/chronic-haven/icons/icon-512x512.png", sizes: "512x512" },
+    { rel: "icon", url: "/favicon.ico", sizes: "any" },
     { rel: "apple-touch-icon", url: "/chronic-haven/icons/icon-192x192.png", sizes: "192x192" },
+  ],
+  links: [
+    { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
   ],
 };
 
