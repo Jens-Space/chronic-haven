@@ -35,7 +35,7 @@ const Nav = () => {
     <>
       <style>{`
         .website-logo {
-          width: 300px !important;
+          width: 200px !important;
           height: auto !important;
         }
         @media (min-width: 1024px) {
