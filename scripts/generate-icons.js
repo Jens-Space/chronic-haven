@@ -1,66 +1,66 @@
 #!/usr/bin/env node
 
 /**
- * Generate PWA icons from SVG
+ * Generate PWA icons from logo.png
  * Requires: npm install sharp
  */
 
-const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const sizes = [72, 96, 128, 144, 152, 192, 384, 512];
-const inputSvg = path.join(__dirname, '../public/icons/icon.svg');
+// Icon sizes needed for PWA
+const sizes = [72, 96, 128, 144, 150, 152, 192, 310, 384, 512];
+const inputPng = path.join(__dirname, '../public/logo.png');
 const outputDir = path.join(__dirname, '../public/icons');
 
 async function generateIcons() {
   try {
     // Check if sharp is installed
+    let sharp;
     try {
-      require.resolve('sharp');
+      sharp = require('sharp');
     } catch (e) {
       console.log('Installing sharp...');
       require('child_process').execSync('npm install sharp --save-dev', {
         cwd: path.join(__dirname, '..'),
         stdio: 'inherit'
       });
+      sharp = require('sharp');
     }
 
-    const sharp = require('sharp');
-    const svgBuffer = fs.readFileSync(inputSvg);
+    const logoBuffer = fs.readFileSync(inputPng);
+    
+    // Get logo dimensions
+    const logoMetadata = await sharp(logoBuffer).metadata();
+    console.log(`Logo dimensions: ${logoMetadata.width}x${logoMetadata.height}`);
 
     for (const size of sizes) {
       const outputPath = path.join(outputDir, `icon-${size}x${size}.png`);
-      await sharp(svgBuffer)
-        .resize(size, size)
+      
+      // Calculate scaling to fill the icon (not fit)
+      // Scale the logo to be 80% of the target size
+      const scaleFactor = (size * 0.85) / Math.max(logoMetadata.width, logoMetadata.height);
+      const scaledWidth = Math.round(logoMetadata.width * scaleFactor);
+      const scaledHeight = Math.round(logoMetadata.height * scaleFactor);
+      
+      await sharp(logoBuffer)
+        .resize(scaledWidth, scaledHeight, { fit: 'cover' })
+        .extend({
+          top: Math.round((size - scaledHeight) / 2),
+          bottom: Math.round((size - scaledHeight) / 2),
+          left: Math.round((size - scaledWidth) / 2),
+          right: Math.round((size - scaledWidth) / 2),
+          background: { r: 0, g: 0, b: 0, alpha: 0 } // Transparent background
+        })
         .png()
         .toFile(outputPath);
-      console.log(`Generated ${size}x${size} icon`);
+      
+      console.log(`Generated ${size}x${size} icon (logo scaled to ${scaledWidth}x${scaledHeight})`);
     }
 
     console.log('All icons generated successfully!');
   } catch (error) {
     console.error('Error generating icons:', error);
-    // Fallback: create placeholder icons using base64
-    console.log('Creating placeholder icons...');
-    createPlaceholderIcons();
-  }
-}
-
-function createPlaceholderIcons() {
-  const { execSync } = require('child_process');
-  
-  for (const size of sizes) {
-    try {
-      const outputPath = path.join(outputDir, `icon-${size}x${size}.png`);
-      // Use ImageMagick if available
-      execSync(`convert -size ${size}x${size} xc:'#8b5cf6' -gravity center -fill white -pointsize ${size/3} -annotate 0 'CH' ${outputPath}`, {
-        stdio: 'ignore'
-      });
-      console.log(`Generated ${size}x${size} placeholder icon`);
-    } catch (e) {
-      console.log(`Could not generate ${size}x${size} icon. Please install ImageMagick or use a different method.`);
-    }
   }
 }
 
