@@ -34,10 +34,9 @@ const Nav = () => {
   return (
     <>
       <style>{`
-        @media (min-width: 1024px) {
-          .website-logo {
-            width: 400px !important;
-          }
+        .website-logo {
+          width: 300px !important;
+          height: auto !important;
         }
       `}</style>
       <nav className="px-4 py-2 bg-white">
@@ -48,7 +47,6 @@ const Nav = () => {
                 src="/chronic-haven/logo.png"
                 alt="Chronic Haven Logo"
                 className="website-logo cursor-pointer hover:opacity-90 transition-opacity"
-                style={{ width: '200px', height: 'auto', display: 'block' }}
               />
             </Link>
           </div>
