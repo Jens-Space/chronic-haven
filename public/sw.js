@@ -1,4 +1,4 @@
-const CACHE_NAME = 'chronic-haven-v5';
+const CACHE_NAME = 'chronic-haven-v6';
 const urlsToCache = [
   '/chronic-haven/',
   '/chronic-haven/index.html',
@@ -12,9 +12,17 @@ const urlsToCache = [
   '/chronic-haven/tracker/',
   '/chronic-haven/manifest.json',
   '/chronic-haven/logo.png',
-  '/chronic-haven/icons/icon-192x192.png',
-  '/chronic-haven/icons/icon-512x512.png',
   '/chronic-haven/favicon.ico',
+  '/chronic-haven/icons/icon-72x72.png',
+  '/chronic-haven/icons/icon-96x96.png',
+  '/chronic-haven/icons/icon-128x128.png',
+  '/chronic-haven/icons/icon-144x144.png',
+  '/chronic-haven/icons/icon-150x150.png',
+  '/chronic-haven/icons/icon-152x152.png',
+  '/chronic-haven/icons/icon-192x192.png',
+  '/chronic-haven/icons/icon-310x310.png',
+  '/chronic-haven/icons/icon-384x384.png',
+  '/chronic-haven/icons/icon-512x512.png',
 ];
 
 // Install event - cache assets
