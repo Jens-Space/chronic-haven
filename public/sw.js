@@ -1,4 +1,4 @@
-const CACHE_NAME = 'chronic-haven-v1';
+const CACHE_NAME = 'chronic-haven-v2';
 const urlsToCache = [
   '/chronic-haven/',
   '/chronic-haven/index.html',
@@ -20,21 +20,11 @@ const urlsToCache = [
 self.addEventListener('install', (event) => {
   // Skip waiting immediately for updates
   self.skipWaiting();
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
-      .catch((error) => {
-        console.log('Cache install error:', error);
-      })
-  );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  // Claim clients immediately
+  // Claim clients immediately - this forces the new SW to take over
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
