@@ -1,0 +1,186 @@
+[00:14:26.447] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/home/jen/Documents/projects/Websites/chronic-haven/docs/dev/server/app/about/page/build-manifest.json'
+[00:14:26.466] Server  ERROR   ⨯ TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+  
+  Caused by:
+      0: Looking up data for TaskId 97382 from database failed
+      1: Unable to open static sorted file referenced from 00000177.meta
+      2: Unable to open static sorted file 00000172.sst
+      3: No such file or directory (os error 2)
+[00:14:26.515] Server  ERROR   Error: ENOENT: no such file or directory, open '/home/jen/Documents/projects/Websites/chronic-haven/docs/dev/server/app/about/page/build-manifest.json'
+[00:14:26.526] Server  ERROR   ⨯ TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+  
+  Caused by:
+      0: Looking up data for TaskId 97382 from database failed
+      1: Unable to open static sorted file referenced from 00000177.meta
+      2: Unable to open static sorted file 00000172.sst
+      3: No such file or directory (os error 2)
+[00:14:26.528] Server  ERROR   TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+  
+  Caused by:
+      0: Looking up data for TaskId 97382 from database failed
+      1: Unable to open static sorted file referenced from 00000177.meta
+      2: Unable to open static sorted file 00000172.sst
+      3: No such file or directory (os error 2)
+[00:14:32.194] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/home/jen/Documents/projects/Websites/chronic-haven/docs/dev/server/app/page/build-manifest.json'
+[00:14:32.198] Server  ERROR   ⨯ TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+  
+  Caused by:
+      0: Looking up data for TaskId 97382 from database failed
+      1: Unable to open static sorted file referenced from 00000177.meta
+      2: Unable to open static sorted file 00000172.sst
+      3: No such file or directory (os error 2)
+[00:14:32.271] Server  ERROR   Error: ENOENT: no such file or directory, open '/home/jen/Documents/projects/Websites/chronic-haven/docs/dev/server/app/page/build-manifest.json'
+[00:14:32.278] Server  ERROR   ⨯ TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+  
+  Caused by:
+      0: Looking up data for TaskId 97382 from database failed
+      1: Unable to open static sorted file referenced from 00000177.meta
+      2: Unable to open static sorted file 00000172.sst
+      3: No such file or directory (os error 2)
+[00:14:32.282] Server  ERROR   TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+  
+  Caused by:
+      0: Looking up data for TaskId 97382 from database failed
+      1: Unable to open static sorted file referenced from 00000177.meta
+      2: Unable to open static sorted file 00000172.sst
+      3: No such file or directory (os error 2)
+[00:14:58.370] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/home/jen/Documents/projects/Websites/chronic-haven/docs/dev/server/app/page/build-manifest.json'
+[00:14:58.377] Server  ERROR   ⨯ TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+  
+  Caused by:
+      0: Looking up data for TaskId 97382 from database failed
+      1: Unable to open static sorted file referenced from 00000177.meta
+      2: Unable to open static sorted file 00000172.sst
+      3: No such file or directory (os error 2)
+[00:14:58.471] Server  ERROR   Error: ENOENT: no such file or directory, open '/home/jen/Documents/projects/Websites/chronic-haven/docs/dev/server/app/page/build-manifest.json'
+[00:14:58.475] Server  ERROR   ⨯ TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+  
+  Caused by:
+      0: Looking up data for TaskId 97382 from database failed
+      1: Unable to open static sorted file referenced from 00000177.meta
+      2: Unable to open static sorted file 00000172.sst
+      3: No such file or directory (os error 2)
+[00:14:58.479] Server  ERROR   TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::client_evaluatable_assets (TaskId 97382))
+  
+  Caused by:
+      0: Looking up data for TaskId 97382 from database failed
+      1: Unable to open static sorted file referenced from 00000177.meta
+      2: Unable to open static sorted file 00000172.sst
+      3: No such file or directory (os error 2)
