@@ -2,49 +2,28 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Nav from "@/components/Nav";
 
-export const metadata: Metadata = {
-  title: "Chronic Haven",
-  description: "A safe, welcoming space for people with chronic invisible illnesses.",
-  manifest: "/manifest.json",
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
+  export const metadata: Metadata = {
     title: "Chronic Haven",
-  },
-  formatDetection: {
-    telephone: false,
-  },
-  icons: [
-    { rel: "icon", url: "/favicon.ico", sizes: "any" },
-    { rel: "icon", type: "image/png", url: "/icons/icon-72x72.png", sizes: "72x72" },
-    { rel: "icon", type: "image/png", url: "/icons/icon-96x96.png", sizes: "96x96" },
-    { rel: "icon", type: "image/png", url: "/icons/icon-128x128.png", sizes: "128x128" },
-    { rel: "icon", type: "image/png", url: "/icons/icon-144x144.png", sizes: "144x144" },
-    { rel: "icon", type: "image/png", url: "/icons/icon-150x150.png", sizes: "150x150" },
-    { rel: "icon", type: "image/png", url: "/icons/icon-152x152.png", sizes: "152x152" },
-    { rel: "icon", type: "image/png", url: "/icons/icon-192x192.png", sizes: "192x192" },
-    { rel: "icon", type: "image/png", url: "/icons/icon-310x310.png", sizes: "310x310" },
-    { rel: "icon", type: "image/png", url: "/icons/icon-384x384.png", sizes: "384x384" },
-    { rel: "icon", type: "image/png", url: "/icons/icon-512x512.png", sizes: "512x512" },
-    { rel: "apple-touch-icon", url: "/icons/icon-72x72.png", sizes: "72x72" },
-    { rel: "apple-touch-icon", url: "/icons/icon-96x96.png", sizes: "96x96" },
-    { rel: "apple-touch-icon", url: "/icons/icon-128x128.png", sizes: "128x128" },
-    { rel: "apple-touch-icon", url: "/icons/icon-144x144.png", sizes: "144x144" },
-    { rel: "apple-touch-icon", url: "/icons/icon-150x150.png", sizes: "150x150" },
-    { rel: "apple-touch-icon", url: "/icons/icon-152x152.png", sizes: "152x152" },
-    { rel: "apple-touch-icon", url: "/icons/icon-192x192.png", sizes: "192x192" },
-    { rel: "apple-touch-icon", url: "/icons/icon-310x310.png", sizes: "310x310" },
-    { rel: "apple-touch-icon", url: "/icons/icon-384x384.png", sizes: "384x384" },
-    { rel: "apple-touch-icon", url: "/icons/icon-512x512.png", sizes: "512x512" },
-    { rel: "maskable-icon", url: "/icons/icon-512x512.png", sizes: "512x512" },
-  ],
-  other: {
-    "msapplication-config": "/browserconfig.xml",
-    "mobile-web-app-capable": "yes",
-    "apple-mobile-web-app-capable": "yes",
-    "apple-mobile-web-app-status-bar-style": "default",
-  },
-};
+    description: "A safe, welcoming space for people with chronic invisible illnesses.",
+    manifest: "/manifest.json",
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: "default",
+      title: "Chronic Haven",
+    },
+    formatDetection: {
+      telephone: false,
+    },
+    icons: [
+      { rel: "icon", url: "/chronic-haven-icon.png", sizes: "any" },
+    ],
+    other: {
+      "msapplication-config": "/browserconfig.xml",
+      "mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-status-bar-style": "default",
+    },
+  };
 
 export const viewport: Viewport = {
   themeColor: "#000000",
