@@ -2,10 +2,12 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Nav from "@/components/Nav";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   export const metadata: Metadata = {
     title: "Chronic Haven",
     description: "A safe, welcoming space for people with chronic invisible illnesses.",
-    manifest: "/manifest.json",
+    manifest: `${basePath}/manifest.json`,
     appleWebApp: {
       capable: true,
       statusBarStyle: "default",
@@ -15,12 +17,12 @@ import Nav from "@/components/Nav";
       telephone: false,
     },
     icons: [
-      { rel: "icon", url: "/chronic-haven-icon.png", sizes: "any" },
+      { rel: "icon", url: `${basePath}/chronic-haven-icon.png`, sizes: "any" },
     ],
     other: {
-      "msapplication-config": "/browserconfig.xml",
+      "msapplication-config": `${basePath}/browserconfig.xml`,
       "mobile-web-app-capable": "yes",
-      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-capable": "yes",
       "apple-mobile-web-app-status-bar-style": "default",
     },
   };
