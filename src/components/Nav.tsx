@@ -49,7 +49,7 @@ const Nav = () => {
       <nav className="px-4 py-2 bg-white">
         <div className="container mx-auto">
           <div className="flex justify-center mb-3 lg:mb-0">
-            <Link href={basePath + '/'} aria-label="Chronic Haven Home">
+            <Link href="/" aria-label="Chronic Haven Home">
               <img
                 src={basePath + '/logo.png'}
                 alt="Chronic Haven Logo"
