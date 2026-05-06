@@ -1,222 +1,179 @@
+'use client';
+
 import Link from 'next/link';
 
 export default function Resources() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-white border-b border-purple-200 py-16">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Resources
-            </h1>
-            <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-              Comprehensive information and tools to help you understand and manage chronic invisible illnesses
-            </p>
-          </div>
+      {/* Header */}
+      <div className="bg-gradient-to-br from-pink-100 via-rose-100 to-orange-100 rounded-2xl shadow-md border border-pink-200 p-8 mb-6">
+        <div className="text-center">
+          <span className="text-5xl inline-block mb-4">📚</span>
+          <h1 className="text-4xl md:text-5xl font-black text-gray-800 mb-4">Helpful Resources</h1>
+          <p className="text-lg font-semibold text-gray-700 max-w-2xl mx-auto leading-relaxed">
+            Helpful UK-based resources and support for chronic invisible illnesses. 💜<br />
+            <span className="text-base font-normal">Find trusted charities and organisations here</span>
+          </p>
         </div>
-      </section>
+      </div>
 
-      {/* Resource Categories */}
-      <section className="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Resource Categories</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Browse our resources by category to find the information you need
-            </p>
-          </div>
+      {/* Resources Grid */}
+      <div className="bg-white rounded-2xl shadow-md border border-purple-100 p-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="https://www.nhs.uk/conditions/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border-2 border-blue-200 hover:border-blue-400 hover:shadow-md transition-all">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🏥</span>
+              <div>
+                <h3 className="font-bold text-blue-600">NHS Conditions</h3>
+                <p className="text-sm text-gray-600">The UK's official health website with information on all conditions</p>
+              </div>
+            </div>
+          </a>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-8 border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-2xl mb-6">
-                📋
+          <a href="https://www.fmauk.org/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-pink-50 to-purple-50 rounded-xl border-2 border-pink-200 hover:border-pink-400 hover:shadow-md transition-all">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🦋</span>
+              <div>
+                <h3 className="font-bold text-pink-600">Fibromyalgia</h3>
+                <p className="text-sm text-gray-600">Fibromyalgia Association UK - Support, information and advice</p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Symptoms Guide</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Learn about common symptoms of chronic invisible illnesses and how to recognize them in yourself and others.
-              </p>
-              <Link 
-                href="/symptoms" 
-                className="inline-block mt-6 text-purple-600 font-medium hover:text-purple-700 transition-colors"
-              >
-                Learn More →
-              </Link>
             </div>
-            
-            <div className="bg-white rounded-xl p-8 border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-2xl mb-6">
-                💊
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Treatment Options</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Explore various management and treatment approaches for chronic invisible illnesses, from lifestyle changes to medical interventions.
-              </p>
-              <Link 
-                href="/treatments" 
-                className="inline-block mt-6 text-purple-600 font-medium hover:text-purple-700 transition-colors"
-              >
-                Learn More →
-              </Link>
-            </div>
-            
-            <div className="bg-white rounded-xl p-8 border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-2xl mb-6">
-                🏥
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Conditions Library</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Detailed information about specific chronic invisible illnesses, including causes, symptoms, and management strategies.
-              </p>
-              <Link 
-                href="/conditions" 
-                className="inline-block mt-6 text-purple-600 font-medium hover:text-purple-700 transition-colors"
-              >
-                Learn More →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Links */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Quick Links</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Fast access to popular resources and information
-            </p>
-          </div>
+          </a>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <Link 
-              href="/symptoms" 
-              className="bg-purple-50 rounded-xl p-6 border border-purple-100 text-center hover:bg-purple-100 transition-colors"
-            >
-              <div className="text-3xl mb-3">📖</div>
-              <h3 className="font-semibold text-gray-900">Symptoms</h3>
-            </Link>
-            
-            <Link 
-              href="/treatments" 
-              className="bg-purple-50 rounded-xl p-6 border border-purple-100 text-center hover:bg-purple-100 transition-colors"
-            >
-              <div className="text-3xl mb-3">💊</div>
-              <h3 className="font-semibold text-gray-900">Treatments</h3>
-            </Link>
-            
-            <Link 
-              href="/conditions" 
-              className="bg-purple-50 rounded-xl p-6 border border-purple-100 text-center hover:bg-purple-100 transition-colors"
-            >
-              <div className="text-3xl mb-3">🏥</div>
-              <h3 className="font-semibold text-gray-900">Conditions</h3>
-            </Link>
-            
-            <Link 
-              href="/community" 
-              className="bg-purple-50 rounded-xl p-6 border border-purple-100 text-center hover:bg-purple-100 transition-colors"
-            >
-              <div className="text-3xl mb-3">👥</div>
-              <h3 className="font-semibold text-gray-900">Community</h3>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Recommended Resources */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Recommended Resources</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Trusted resources for managing chronic invisible illnesses
-            </p>
-          </div>
+          <a href="https://rsdf.org.uk/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-red-50 to-pink-50 rounded-xl border-2 border-red-200 hover:border-red-400 hover:shadow-md transition-all">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🤯</span>
+              <div>
+                <h3 className="font-bold text-red-600">CRPS</h3>
+                <p className="text-sm text-gray-600">CRPS UK - Support and information for Complex Regional Pain Syndrome</p>
+              </div>
+            </div>
+          </a>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-8 border border-purple-100 shadow-sm">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-xl mr-4">
-                  🏥
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">Medical Resources</h3>
-                  <p className="text-sm text-gray-500">Trusted medical information and resources</p>
-                </div>
+          <a href="https://www.theibsnetwork.org/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-teal-50 to-green-50 rounded-xl border-2 border-teal-200 hover:border-teal-400 hover:shadow-md transition-all">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🌸</span>
+              <div>
+                <h3 className="font-bold text-teal-600">IBS</h3>
+                <p className="text-sm text-gray-600">The IBS Network - UK charity for Irritable Bowel Syndrome support</p>
               </div>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-center gap-2">
-                  <span className="text-purple-600">•</span>
-                  <a href="https://www.mayoclinic.org" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">Mayo Clinic</a>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-purple-600">•</span>
-                  <a href="https://www.webmd.com" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">WebMD</a>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-purple-600">•</span>
-                  <a href="https://www.nhs.uk" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">NHS</a>
-                </li>
-              </ul>
             </div>
-            
-            <div className="bg-white rounded-xl p-8 border border-purple-100 shadow-sm">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-xl mr-4">
-                  👥
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">Support Organizations</h3>
-                  <p className="text-sm text-gray-500">Organizations that provide support and resources</p>
-                </div>
+          </a>
+          
+          <a href="https://www.meassociation.org.uk/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl border-2 border-purple-200 hover:border-purple-400 hover:shadow-md transition-all">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">⚡</span>
+              <div>
+                <h3 className="font-bold text-purple-600">ME/CFS</h3>
+                <p className="text-sm text-gray-600">ME Association - Support and research for Myalgic Encephalomyelitis</p>
               </div>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-center gap-2">
-                  <span className="text-purple-600">•</span>
-                  <a href="https://www.invisibleillnessweek.com" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">Invisible Illness Week</a>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-purple-600">•</span>
-                  <a href="https://www.arthritis.org" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">Arthritis Foundation</a>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-purple-600">•</span>
-                  <a href="https://www.lupus.org" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">Lupus Foundation</a>
-                </li>
-              </ul>
             </div>
-          </div>
+          </a>
+          
+          <a href="https://www.lupus.org.uk/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl border-2 border-indigo-200 hover:border-indigo-400 hover:shadow-md transition-all">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🌙</span>
+              <div>
+                <h3 className="font-bold text-indigo-600">Lupus</h3>
+                <p className="text-sm text-gray-600">Lupus UK - Support and information for lupus patients</p>
+              </div>
+            </div>
+          </a>
+          
+          <a href="https://www.crohnsandcolitis.org.uk/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-green-50 to-yellow-50 rounded-xl border-2 border-green-200 hover:border-green-400 hover:shadow-md transition-all">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🌿</span>
+              <div>
+                <h3 className="font-bold text-green-600">Crohn's & Colitis</h3>
+                <p className="text-sm text-gray-600">Crohn's & Colitis UK - Support for inflammatory bowel disease</p>
+              </div>
+            </div>
+          </a>
+          
+          <a href="https://www.endometriosis-uk.org/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl border-2 border-yellow-200 hover:border-yellow-400 hover:shadow-md transition-all">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🏃</span>
+              <div>
+                <h3 className="font-bold text-yellow-600">Endometriosis</h3>
+                <p className="text-sm text-gray-600">Endometriosis UK - Support and information for endometriosis</p>
+              </div>
+            </div>
+          </a>
+          
+          <a href="https://www.diabetes.org.uk/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-orange-50 to-red-50 rounded-xl border-2 border-orange-200 hover:border-orange-400 hover:shadow-md transition-all">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🩸</span>
+              <div>
+                <h3 className="font-bold text-orange-600">Diabetes</h3>
+                <p className="text-sm text-gray-600">Diabetes UK - Support, information and research for diabetes</p>
+              </div>
+            </div>
+          </a>
+          
+          <a href="https://www.coeliac.org.uk/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl border-2 border-amber-200 hover:border-amber-400 hover:shadow-md transition-all">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🌾</span>
+              <div>
+                <h3 className="font-bold text-amber-600">Coeliac Disease</h3>
+                <p className="text-sm text-gray-600">Coeliac UK - Information and support for celiac disease</p>
+              </div>
+            </div>
+          </a>
+          
+          <a href="https://www.versusarthritis.org/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl border-2 border-cyan-200 hover:border-cyan-400 hover:shadow-md transition-all">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🦴</span>
+              <div>
+                <h3 className="font-bold text-cyan-600">Arthritis</h3>
+                <p className="text-sm text-gray-600">Versus Arthritis - Support for all types of arthritis</p>
+              </div>
+            </div>
+          </a>
+          
+          <a href="https://www.chronicillness.org.uk/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-slate-50 to-gray-50 rounded-xl border-2 border-slate-200 hover:border-slate-400 hover:shadow-md transition-all">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">💜</span>
+              <div>
+                <h3 className="font-bold text-slate-600">General Support</h3>
+                <p className="text-sm text-gray-600">Chronic Illness UK - Support for all chronic conditions</p>
+              </div>
+            </div>
+          </a>
         </div>
-      </section>
+      </div>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-purple-600 text-white">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Help?</h2>
-            <p className="text-lg md:text-xl mb-8 text-purple-100 leading-relaxed">
-              If you're looking for specific information or need help managing your condition, 
-              we're here to support you.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="px-8 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-colors shadow-md"
-              >
-                Contact Us
-              </Link>
-              <Link 
-                href="/community" 
-                className="px-8 py-3 bg-purple-700 text-white font-semibold rounded-lg border border-purple-300 hover:bg-purple-800 transition-colors"
-              >
-                Join Community
-              </Link>
-            </div>
-          </div>
+      {/* Encouraging Message */}
+      <div className="bg-gradient-to-br from-teal-100 via-cyan-100 to-blue-100 rounded-2xl shadow-md border border-teal-200 p-8 mb-6">
+        <div className="text-center">
+          <span className="text-4xl inline-block mb-3">💜</span>
+          <h2 className="text-3xl font-black text-gray-800 mb-4">You're Not Alone</h2>
+          <p className="text-gray-700 leading-relaxed text-lg mb-4">
+            Remember, there are many resources and communities available to support you on your journey.
+            Don't hesitate to reach out for help when you need it.
+          </p>
+          <p className="text-gray-800 font-bold text-xl">
+            Asking for support is a sign of strength. You've got this! ✨
+          </p>
         </div>
-      </section>
+      </div>
+
+      {/* Navigation Buttons */}
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
+        <button
+          onClick={scrollToTop}
+          className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-full font-bold hover:bg-purple-700 transition-colors shadow-md"
+        >
+          Back to Top
+        </button>
+        <Link href="/" className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white !text-white rounded-full font-bold hover:bg-purple-700 transition-colors shadow-md">
+          Back to Home
+        </Link>
+      </div>
+
     </div>
   );
 }

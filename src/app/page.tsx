@@ -3,210 +3,153 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-white border-b border-purple-200 py-16">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/2 text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Chronic Haven
-              </h1>
-              <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
-                A trusted resource for those living with chronic invisible illnesses. 
-                Comprehensive information, supportive community, and practical resources 
-                to help you manage your journey with confidence.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Link 
-                  href="/resources" 
-                  className="px-8 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors shadow-md"
-                >
-                  Explore Resources
-                </Link>
-                <Link 
-                  href="/community" 
-                  className="px-8 py-3 bg-white text-purple-600 font-semibold rounded-lg border border-purple-300 hover:bg-purple-50 transition-colors"
-                >
-                  Join Our Community
-                </Link>
-              </div>
-            </div>
-            <div className="md:w-1/2">
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border border-purple-200 shadow-lg">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-purple-600 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-6">
-                    💜
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">You Are Not Alone</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Connect with others who understand your journey and access reliable information 
-                    to help manage your condition.
-                  </p>
-                </div>
-              </div>
-            </div>
+      {/* Welcome Section */}
+      <div className="bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 rounded-2xl shadow-md border border-pink-200 p-8 mb-6">
+        <div className="text-center mb-6">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-gray-800">Chronic Haven 💜</h1>
+          <p className="text-lg font-semibold text-gray-700 max-w-2xl mx-auto leading-relaxed mb-4">
+            A warm, welcoming space for those living with chronic invisible illnesses. 
+            From fibromyalgia to IBS, asthma, lupus, CRPS, and beyond — 
+            take your time exploring. There's no rush here. We're so glad you've found your way to us! ✨
+          </p>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-purple-500 text-white rounded-full text-sm font-bold shadow-md">
+            <span>👋</span>
+            <span>Welcome! We're so happy you're here.</span>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Features Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Resources</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive information and tools to help you understand and manage chronic invisible illnesses
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-8 border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-2xl mb-6">
+      {/* Understanding Chronic Invisible Illnesses */}
+      <div className="bg-white rounded-2xl shadow-md border border-pink-100 p-6 mb-6">
+        <div className="text-center mb-6">
+          <span className="text-4xl inline-block mb-3">🌟</span>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-800">Understanding Invisible Illnesses</h2>
+          <p className="text-gray-600 font-medium text-base leading-relaxed mt-4 max-w-2xl mx-auto">
+            Chronic invisible illnesses affect millions of people worldwide. These conditions aren't 
+            immediately apparent to others but significantly impact daily life. Let's explore them together.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Link href="/symptoms" className="group">
+            <div className="flex flex-col items-center text-center p-5 rounded-xl bg-gradient-to-br from-pink-50 to-purple-50 border-2 border-pink-200 hover:border-pink-400 hover:shadow-md transition-all">
+              <div className="w-12 h-12 bg-pink-400 rounded-xl flex items-center justify-center text-white text-xl mb-3">
                 📋
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Symptoms Guide</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Learn about common symptoms of chronic invisible illnesses and how to recognize them in yourself and others.
-              </p>
-              <Link 
-                href="/symptoms" 
-                className="inline-block mt-6 text-purple-600 font-medium hover:text-purple-700 transition-colors"
-              >
-                Learn More →
-              </Link>
+              <h3 className="font-bold text-gray-800 text-lg mb-1 group-hover:text-pink-600 transition-colors">Common Symptoms</h3>
+              <p className="text-gray-600 font-medium text-base">Learn about symptoms shared by many chronic conditions.</p>
             </div>
-            <div className="bg-white rounded-xl p-8 border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-2xl mb-6">
+          </Link>
+          <Link href="/treatments" className="group">
+            <div className="flex flex-col items-center text-center p-5 rounded-xl bg-gradient-to-br from-purple-50 to-indigo-50 border-2 border-purple-200 hover:border-purple-400 hover:shadow-md transition-all">
+              <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center text-white text-xl mb-3">
                 💊
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Treatment Options</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Explore various management and treatment approaches for chronic invisible illnesses, 
-                from lifestyle changes to medical interventions.
-              </p>
-              <Link 
-                href="/treatments" 
-                className="inline-block mt-6 text-purple-600 font-medium hover:text-purple-700 transition-colors"
-              >
-                Learn More →
-              </Link>
+              <h3 className="font-bold text-gray-800 text-lg mb-1 group-hover:text-purple-600 transition-colors">Management & Treatment</h3>
+              <p className="text-gray-600 font-medium text-base">Discover ways to help manage symptoms and improve quality of life.</p>
             </div>
-            <div className="bg-white rounded-xl p-8 border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-2xl mb-6">
+          </Link>
+          <Link href="/conditions" className="group">
+            <div className="flex flex-col items-center text-center p-5 rounded-xl bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 hover:border-blue-400 hover:shadow-md transition-all">
+              <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-white text-xl mb-3">
                 🏥
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Conditions Library</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Detailed information about specific chronic invisible illnesses, including causes, symptoms, 
-                and management strategies.
-              </p>
-              <Link 
-                href="/conditions" 
-                className="inline-block mt-6 text-purple-600 font-medium hover:text-purple-700 transition-colors"
-              >
-                Learn More →
-              </Link>
+              <h3 className="font-bold text-gray-800 text-lg mb-1 group-hover:text-blue-600 transition-colors">Conditions</h3>
+              <p className="text-gray-600 font-medium text-base">Learn about specific invisible illnesses and their impacts.</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Conditions Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Conditions We Cover</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Information and resources for a wide range of chronic invisible illnesses
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { icon: '🦋', name: 'Lupus' },
-              { icon: '💨', name: 'Asthma' },
-              { icon: '🌸', name: 'IBS' },
-              { icon: '🦴', name: 'CRPS' },
-              { icon: '🤯', name: 'Fibromyalgia' },
-              { icon: '⚡', name: 'ME/CFS' },
-              { icon: '🏃', name: 'Endometriosis' },
-              { icon: '🧠', name: 'More Conditions' }
-            ].map((condition, index) => (
-              <div key={index} className="bg-purple-50 rounded-xl p-6 border border-purple-100 text-center">
-                <div className="text-3xl mb-3">{condition.icon}</div>
-                <h3 className="font-semibold text-gray-900">{condition.name}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Community Section */}
-      <section className="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Join Our Community</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Connect with others who understand your journey and share experiences
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto bg-white rounded-2xl p-10 shadow-lg border border-purple-200">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Support & Understanding</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Join our supportive community where you can connect with others facing similar challenges, 
-                  share experiences, and find encouragement.
-                </p>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center gap-2">
-                    <span className="text-purple-600">✓</span>
-                    <span>Peer support groups</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-purple-600">✓</span>
-                    <span>Community forums</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-purple-600">✓</span>
-                    <span>Monthly virtual meetups</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-purple-600">✓</span>
-                    <span>Resource sharing</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="text-center">
-                <div className="w-40 h-40 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-6xl mx-auto mb-6">
-                  👥
-                </div>
-                <Link 
-                  href="/community" 
-                  className="inline-block px-8 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors shadow-md"
-                >
-                  Join Community
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-purple-600 text-white">
-        <div className="container mx-auto px-6 max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Start Your Journey to Better Health</h2>
-          <p className="text-lg md:text-xl mb-8 text-purple-100 leading-relaxed">
-            Whether you're seeking information, support, or a community that understands, 
-            Chronic Haven is here to help you every step of the way.
-          </p>
-          <Link 
-            href="/about" 
-            className="inline-block px-10 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-colors shadow-lg"
-          >
-            Learn More About Us
           </Link>
         </div>
-      </section>
+      </div>
+
+      {/* Examples of Invisible Illnesses */}
+      <div className="bg-white rounded-2xl shadow-md border border-purple-100 p-6 mb-6">
+        <div className="text-center mb-6">
+          <span className="text-4xl inline-block mb-3">💪</span>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-800">Conditions We Cover</h2>
+          <p className="text-gray-600 font-medium text-base leading-relaxed mt-4 max-w-2xl mx-auto">
+            Chronic invisible illnesses come in many forms. Here are some of the conditions we provide information about:
+          </p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="text-center p-4 bg-pink-50 rounded-xl">
+            <span className="text-2xl">🦋</span>
+            <h3 className="font-bold text-gray-800 mt-2">Lupus</h3>
+          </div>
+          <div className="text-center p-4 bg-purple-50 rounded-xl">
+            <span className="text-2xl">💨</span>
+            <h3 className="font-bold text-gray-800 mt-2">Asthma</h3>
+          </div>
+          <div className="text-center p-4 bg-blue-50 rounded-xl">
+            <span className="text-2xl">🌸</span>
+            <h3 className="font-bold text-gray-800 mt-2">IBS</h3>
+          </div>
+          <div className="text-center p-4 bg-cyan-50 rounded-xl">
+            <span className="text-2xl">🦴</span>
+            <h3 className="font-bold text-gray-800 mt-2">CRPS</h3>
+          </div>
+          <div className="text-center p-4 bg-teal-50 rounded-xl">
+            <span className="text-2xl">🤯</span>
+            <h3 className="font-bold text-gray-800 mt-2">Fibromyalgia</h3>
+          </div>
+          <div className="text-center p-4 bg-green-50 rounded-xl">
+            <span className="text-2xl">⚡</span>
+            <h3 className="font-bold text-gray-800 mt-2">ME/CFS</h3>
+          </div>
+          <div className="text-center p-4 bg-yellow-50 rounded-xl">
+            <span className="text-2xl">🏃</span>
+            <h3 className="font-bold text-gray-800 mt-2">Endometriosis</h3>
+          </div>
+          <div className="text-center p-4 bg-orange-50 rounded-xl">
+            <span className="text-2xl">🧠</span>
+            <h3 className="font-bold text-gray-800 mt-2">And Many More...</h3>
+          </div>
+        </div>
+      </div>
+
+      {/* Resources */}
+      <div className="bg-white rounded-2xl shadow-md border border-blue-100 p-6 mb-6">
+        <div className="text-center mb-6">
+          <span className="text-4xl inline-block mb-3">📚</span>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-800">Resources & Support</h2>
+          <p className="text-gray-600 font-medium text-base leading-relaxed mt-4 max-w-2xl mx-auto">
+            Here you'll find helpful information, supportive organizations, and ways to connect with 
+            others who truly understand what you're going through.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Link href="/resources" className="group">
+            <div className="flex flex-col items-center text-center p-5 rounded-xl bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 hover:border-blue-400 hover:shadow-md transition-all">
+              <div className="w-12 h-12 bg-blue-400 rounded-xl flex items-center justify-center text-white text-xl mb-3">
+                📖
+              </div>
+              <h3 className="font-bold text-gray-800 text-lg mb-1 group-hover:text-blue-600 transition-colors">Resources</h3>
+              <p className="text-gray-600 font-medium text-base">Helpful guides, articles, and trusted organizations.</p>
+            </div>
+          </Link>
+          <Link href="/community" className="group">
+            <div className="flex flex-col items-center text-center p-5 rounded-xl bg-gradient-to-br from-cyan-50 to-teal-50 border-2 border-cyan-200 hover:border-cyan-400 hover:shadow-md transition-all">
+              <div className="w-12 h-12 bg-cyan-400 rounded-xl flex items-center justify-center text-white text-xl mb-3">
+                👥
+              </div>
+              <h3 className="font-bold text-gray-800 text-lg mb-1 group-hover:text-cyan-600 transition-colors">Community</h3>
+              <p className="text-gray-600 font-medium text-base">Connect with others who understand your journey.</p>
+            </div>
+          </Link>
+        </div>
+      </div>
+
+      {/* Encouraging Message */}
+      <div className="bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 rounded-2xl shadow-md border border-pink-200 p-8 mb-6">
+        <div className="text-center">
+          <p className="text-4xl mb-3">💜</p>
+          <p className="text-gray-800 font-semibold italic leading-relaxed text-lg mb-3">
+            You are stronger than you know. Every day you show up for yourself is a victory. 
+            Be gentle with yourself — you are doing the best you can.
+          </p>
+          <p className="text-gray-800 font-bold text-base">
+            Take things one day at a time. You've got this! ✨
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,173 +1,102 @@
+'use client';
+
 import Link from 'next/link';
 
 export default function Community() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-white border-b border-purple-200 py-16">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Our Community
-            </h1>
-            <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-              Connect with others who understand your journey and share experiences
-            </p>
-          </div>
+      {/* Header */}
+      <div className="bg-gradient-to-br from-pink-100 via-rose-100 to-orange-100 rounded-2xl shadow-md border border-pink-200 p-8 mb-6">
+        <div className="text-center">
+          <span className="text-5xl inline-block mb-4">💜</span>
+          <h1 className="text-4xl md:text-5xl font-black text-gray-800 mb-4">Find Your Community</h1>
+          <p className="text-lg font-semibold text-gray-700 max-w-2xl mx-auto leading-relaxed">
+            Connect with others who truly understand what you're going through.<br />
+            <span className="text-base font-normal">You're not alone on this journey 💜</span>
+          </p>
         </div>
-      </section>
+      </div>
 
-      {/* Community Features */}
-      <section className="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="max-w-4xl mx-auto bg-white rounded-2xl p-10 shadow-lg border border-purple-200">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Support & Understanding</h2>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Join our supportive community where you can connect with others facing similar challenges, 
-                  share experiences, and find encouragement.
-                </p>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center gap-2">
-                    <span className="text-purple-600">✓</span>
-                    <span>Peer support groups</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-purple-600">✓</span>
-                    <span>Community forums</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-purple-600">✓</span>
-                    <span>Monthly virtual meetups</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-purple-600">✓</span>
-                    <span>Resource sharing</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="text-center">
-                <div className="w-40 h-40 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-6xl mx-auto mb-6">
-                  👥
-                </div>
-                <Link 
-                  href="/community" 
-                  className="inline-block px-8 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors shadow-md"
-                >
-                  Join Community
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Introduction */}
+      <div className="bg-white rounded-2xl shadow-md border border-purple-100 p-6 mb-6">
+        <p className="text-gray-700 leading-relaxed text-lg mb-4">
+          Living with a chronic invisible illness can feel isolating, but you don't have to face it alone. 
+          Connecting with others who share similar experiences can provide invaluable emotional support, 
+          practical tips, and a sense of belonging.
+        </p>
+        <p className="text-gray-700 leading-relaxed text-lg">
+          Whether you live with fibromyalgia, ME/CFS, lupus, IBS, CRPS, diabetes, endometriosis, 
+          or any other chronic invisible illness, <strong>you are welcome here</strong>. 💜
+        </p>
+      </div>
 
-      {/* Community Guidelines */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Community Guidelines</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our community is built on respect, kindness, and understanding
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-purple-50 rounded-xl p-8 border border-purple-100">
-              <div className="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-2xl mb-6">
-                🤝
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Respect & Kindness</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Treat others with respect and kindness. Everyone's experience is valid and unique.
-              </p>
-            </div>
-            
-            <div className="bg-purple-50 rounded-xl p-8 border border-purple-100">
-              <div className="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-2xl mb-6">
-                🔒
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Privacy</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Respect the privacy of others. Do not share personal information without permission.
-              </p>
-            </div>
-            
-            <div className="bg-purple-50 rounded-xl p-8 border border-purple-100">
-              <div className="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-2xl mb-6">
-                📚
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Safety</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Keep discussions safe and constructive. If you're in crisis, please seek professional help.
-              </p>
-            </div>
-          </div>
+      {/* Online Communities */}
+      <div className="bg-white rounded-2xl shadow-md border border-teal-100 p-6 mb-6">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-2xl">🌐</span>
+          <h2 className="text-2xl font-bold text-gray-800">Online Communities</h2>
         </div>
-      </section>
+        <p className="text-gray-600 mb-4">Discover supportive online communities where you can share experiences, ask questions, and find understanding:</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="https://healthunlocked.com/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl border-2 border-teal-200 hover:border-teal-400 hover:shadow-md transition-all">
+            <h3 className="font-bold text-teal-600 mb-2">HealthUnlocked</h3>
+            <p className="text-sm text-gray-600">Health-focused communities with verified information and peer support from people who understand.</p>
+          </a>
+          <a href="https://themighty.com/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl border-2 border-cyan-200 hover:border-cyan-400 hover:shadow-md transition-all">
+            <h3 className="font-bold text-cyan-600 mb-2">The Mighty</h3>
+            <p className="text-sm text-gray-600">Real stories and support from people facing health challenges. Find your tribe here.</p>
+          </a>
+          <a href="https://cpa.org.uk/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border-2 border-blue-200 hover:border-blue-400 hover:shadow-md transition-all">
+            <h3 className="font-bold text-blue-600 mb-2">Chronic Pain Anonymous</h3>
+            <p className="text-sm text-gray-600">A welcoming 12-step program for people living with chronic pain. Find understanding and support.</p>
+          </a>
+          <a href="https://www.stuffthatworks.health/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl border-2 border-indigo-200 hover:border-indigo-400 hover:shadow-md transition-all">
+            <h3 className="font-bold text-indigo-600 mb-2">StuffThatWorks</h3>
+            <p className="text-sm text-gray-600">A supportive platform for sharing and discovering treatments that work from real people.</p>
+          </a>
+          <a href="https://www.togetherall.com/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl border-2 border-purple-200 hover:border-purple-400 hover:shadow-md transition-all">
+            <h3 className="font-bold text-purple-600 mb-2">Togetherall</h3>
+            <p className="text-sm text-gray-600">A safe online community for mental health support, free for NHS patients. You're not alone.</p>
+          </a>
+          <a href="https://www.patientslikeme.com/" target="_blank" rel="noopener noreferrer" className="block p-4 bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl border-2 border-pink-200 hover:border-pink-400 hover:shadow-md transition-all">
+            <h3 className="font-bold text-pink-600 mb-2">PatientsLikeMe</h3>
+            <p className="text-sm text-gray-600">Connect with patients, share your journey, and track your health with people who care.</p>
+          </a>
+        </div>
+      </div>
 
-      {/* Testimonials */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Members Say</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Real stories from real people in our community
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-8 border border-purple-100 shadow-sm">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white text-lg mr-4">
-                  👩
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Sarah</h4>
-                  <p className="text-sm text-gray-500">Living with Lupus</p>
-                </div>
-              </div>
-              <p className="text-gray-600 italic leading-relaxed">
-                "This community has been a lifesaver. I finally feel understood and supported."
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-xl p-8 border border-purple-100 shadow-sm">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white text-lg mr-4">
-                  👨
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Michael</h4>
-                  <p className="text-sm text-gray-500">Living with Fibromyalgia</p>
-                </div>
-              </div>
-              <p className="text-gray-600 italic leading-relaxed">
-                "The resources and support here have helped me manage my symptoms better."
-              </p>
-            </div>
-          </div>
+      {/* Encouraging Message */}
+      <div className="bg-gradient-to-br from-teal-100 via-cyan-100 to-blue-100 rounded-2xl shadow-md border border-teal-200 p-8 mb-6">
+        <div className="text-center">
+          <span className="text-4xl inline-block mb-3">💜</span>
+          <h2 className="text-3xl font-black text-gray-800 mb-4">Remember: You're Not Alone</h2>
+          <p className="text-gray-700 leading-relaxed text-lg mb-4">
+            Millions of people around the world live with chronic invisible illnesses and understand exactly what you're going through.
+            Reaching out to others is a sign of strength, not weakness.
+          </p>
+          <p className="text-gray-800 font-bold text-xl">
+            Your community is waiting for you. Take that first step today! ✨
+          </p>
         </div>
-      </section>
+      </div>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-purple-600 text-white">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Us Today</h2>
-            <p className="text-lg md:text-xl mb-8 text-purple-100 leading-relaxed">
-              Join our supportive community and connect with others who understand your journey.
-            </p>
-            <Link 
-              href="/community" 
-              className="inline-block px-10 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-colors shadow-lg"
-            >
-              Join Community
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Navigation Buttons */}
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
+        <button
+          onClick={scrollToTop}
+          className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-full font-bold hover:bg-purple-700 transition-colors shadow-md"
+        >
+          Back to Top
+        </button>
+        <Link href="/" className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white !text-white rounded-full font-bold hover:bg-purple-700 transition-colors shadow-md">
+          Back to Home
+        </Link>
+      </div>
+
     </div>
   );
 }

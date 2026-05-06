@@ -3,8 +3,6 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,7 +10,7 @@ const Nav = () => {
     // Register service worker
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register(basePath + '/sw.js')
+        navigator.serviceWorker.register('/chronic-haven/sw.js')
           .then((registration) => {
             console.log('SW registered:', registration.scope);
           })
@@ -51,7 +49,7 @@ const Nav = () => {
           <div className="flex justify-center mb-3 lg:mb-0">
             <Link href="/" aria-label="Chronic Haven Home">
               <img
-                src={basePath + '/logo.png'}
+                src="/chronic-haven/logo.png"
                 alt="Chronic Haven Logo"
                 className="website-logo cursor-pointer hover:opacity-90 transition-opacity"
               />
